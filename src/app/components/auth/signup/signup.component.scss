@@ -1,7 +1,7 @@
 @import '/src/styles.scss';
 
 .signup {
-	padding: 5% 0;
+	padding: 5% 0 16% 0px;
 	img {
 		width: 40%;
 		height: auto;
@@ -10,7 +10,7 @@
 		padding-top: 5%;
 		p {
 			font-size: 15px;
-			color: gray;
+			color:  $lightDefault;
 			padding: 0 13%;
 			text-align: center;
 		}
