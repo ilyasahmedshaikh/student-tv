@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'auth',
     loadChildren: () => import('./components/auth/auth.module').then(m => m.AuthModule)
   },
+  {
+    path: 'news',
+    loadChildren: () => import('./components/news/news.module').then(m => m.NewsModule)
+  },
 ];
 
 @NgModule({

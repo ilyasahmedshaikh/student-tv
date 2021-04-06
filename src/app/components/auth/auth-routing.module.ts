@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AuthComponent } from './auth.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ForgotComponent } from './forgot/forgot.component';
@@ -9,23 +10,25 @@ import { TermsConditionsComponent } from './terms-conditions/terms-conditions.co
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent
-  },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'signup',
-    component: SignupComponent
-  },
-  {
-    path: 'forgot',
-    component: ForgotComponent
-  },
-  {
-    path: 'terms-conditions',
-    component: TermsConditionsComponent
+    component: AuthComponent,
+    children: [
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'signup',
+        component: SignupComponent
+      },
+      {
+        path: 'forgot',
+        component: ForgotComponent
+      },
+      {
+        path: 'terms-conditions',
+        component: TermsConditionsComponent
+      },
+    ]
   },
 ];
 
