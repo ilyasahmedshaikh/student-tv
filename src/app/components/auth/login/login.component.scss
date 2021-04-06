@@ -1,1 +1,15 @@
 @import '/src/styles.scss';
+
+.login {
+	padding: 5% 0;
+	img {
+		width: 40%;
+		height: auto;
+	}
+	.forgot-btn {
+		a {
+			color: $lightDefault;
+			font-size: 17px;
+		}
+	}
+}
