@@ -5,7 +5,7 @@ student tv portal app
 > ng serve --host 0.0.0.0
 
 # set Upstream with Parent:
-git remote add upstream https://github.com/ilyasahmedshaikh/mumm-app.git
+git remote add upstream https://github.com/ilyasahmedshaikh/student-tv.git
 
 # Fetch Forked Repo
 git fetch upstream
