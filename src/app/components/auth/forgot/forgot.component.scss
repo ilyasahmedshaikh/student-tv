@@ -1,24 +1,21 @@
 @import '/src/styles.scss';
 
-.forgot{
-    padding: 5% 0;
-}
-
-.forgot img{
-    width: 40%;
-    height: auto;
-}
-
-.forgot h5{
-    text-align: center;
-    font-size: 25px;
-    font-weight: bold;
-    padding-top: 5%;
-}
-
-.forgot p{
-    text-align: center;
-    font-size: 15px;
-    color:  $lightDefault;
-    padding: 3% 4% 0px 4%;
+.forgot {
+	padding: 5% 0;
+	img {
+		width: 40%;
+		height: auto;
+	}
+	h5 {
+		text-align: center;
+		font-size: 25px;
+		font-weight: bold;
+		padding-top: 5%;
+	}
+	p {
+		text-align: center;
+		font-size: 14px;
+		color: $lightDefault;
+		padding-top: 10px;
+	}
 }
