@@ -7,10 +7,11 @@ import { CoursesTakenComponent } from './courses-taken/courses-taken.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { StudiesComponent } from './studies/studies.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
 
 
 @NgModule({
-  declarations: [ProfileComponent, CoursesTakenComponent, ExperiencesComponent, StudiesComponent, PrivacyPolicyComponent],
+  declarations: [ProfileComponent, CoursesTakenComponent, ExperiencesComponent, StudiesComponent, PrivacyPolicyComponent, ViewProfileComponent],
   imports: [
     CommonModule,
     ProfileRoutingModule

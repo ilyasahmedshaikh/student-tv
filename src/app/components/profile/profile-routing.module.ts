@@ -6,6 +6,7 @@ import { CoursesTakenComponent } from './courses-taken/courses-taken.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { StudiesComponent } from './studies/studies.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,14 @@ const routes: Routes = [
     path: '',
     component: ProfileComponent,
     children: [
+      {
+        path: '',
+        component: ViewProfileComponent
+      },
+      {
+        path: 'view-profile',
+        component: ViewProfileComponent
+      },
       {
         path: 'courses-taken',
         component: CoursesTakenComponent
