@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ProfileComponent } from './profile.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
 import { CoursesTakenComponent } from './courses-taken/courses-taken.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { StudiesComponent } from './studies/studies.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
-import { ViewProfileComponent } from './view-profile/view-profile.component';
 
 
 const routes: Routes = [
