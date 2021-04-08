@@ -29,6 +29,7 @@ section {
 .form-control {
     font-size: 15px;
     border: 1px solid #e7e7e7 !important;
+    height: 45px;
 }
 
 textarea:focus,
@@ -47,7 +48,7 @@ input[type="url"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
-.uneditable-input:focus {   
+.uneditable-input:focus {
   border-color: none;
   box-shadow: none;
   outline: 0 none;
