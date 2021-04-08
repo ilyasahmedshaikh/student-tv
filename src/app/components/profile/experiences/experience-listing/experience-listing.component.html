@@ -1,1 +1,25 @@
-<p>experience-listing works!</p>
+<div class="experience-listing">
+    <div class="container">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-6 px-0">
+                    <h3>Experiences</h3>
+                </div>
+
+                <div class="col-6 px-0">
+                    <a href="#"><i class="fas fa-plus"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-3" routerLink="/profile/experiences/experience-details" *ngFor="let item of data">
+            <div class="card-body">
+                <h6>
+                    <span>{{item.company}}</span>
+                    <span class="text-muted float-right">{{item.dateFrom}} - {{item.dateTo}}</span>
+                </h6>
+                <p>{{item.designation}}</p>
+            </div>
+        </div>
+    </div>
+  </div>
