@@ -10,16 +10,25 @@
 
 <div class="sidebar side" [ngClass]="{'show': sidebar}">
     <ul>
-        <li>
-            <a (click)="toggleMenu()" routerLink="/auth/login">
-                Login
-            </a>
-        </li>
+      <li>
+        <a (click)="toggleMenu()" routerLink="/Profile">
+            Profile
+        </a>
+      </li>
+      <li>
+        <a (click)="toggleMenu()" routerLink="/news">
+            News
+        </a>
+      </li>
+      <li>
+        <a (click)="toggleMenu()" routerLink="/auth/login">
+            Login
+        </a>
+      </li>
 
-
-        <div class="bottom-thing">
-            <a href="tel:+923337148980"><i class="fas fa-question-circle"></i> Need Help ?</a>
-        </div>
+      <div class="bottom-thing">
+          <a href="tel:+923337148980"><i class="fas fa-question-circle"></i> Need Help ?</a>
+      </div>
     </ul>
 </div>
 
