@@ -1,63 +1,59 @@
 @import '/src/styles.scss';
 
 .profile {
-    padding: 5% 0px 18% 0;
-}
-
-.profile .avatar{
-    text-align: center;
-}
-
-.profile .avatar img{
-    width: 120px;
-    height: 120px;
-}
-
-.profile .avatar h3{
-    font-size: 22px;
-    padding-top: 10px;
-}
-
-.profile .inputs .custom-input{
-    position: relative;
-}
-
-.profile .inputs i{
-    position: absolute;
-    font-size: 19px;
-    color: $lightDefault;
-    top: 7px;
-    left: 15px;
-}
-
-.profile .form-control{
-    padding-left: 45px;
-}
-
-.profile .list-group a {
-    display: flex;
-    justify-content: space-between;
-}
-
-.profile .support{
-    padding-top: 6%;
-}
-
-.profile .support h6{
-    font-size: 23px;
-    font-weight: bold;
-}
-
-.profile .support a{
-    font-size: 16px;
-    padding-top: 10px;
-    display: block;
-    cursor: pointer;
-}
-
-.profile .support a:hover{
-   color: $orange;
-   transition: 0.5s;
-   opacity: 0.5s;
+	padding: 5% 0px 18% 0;
+	.avatar {
+		text-align: center;
+		img {
+			width: 120px;
+			height: 120px;
+		}
+		h3 {
+			font-size: 22px;
+			padding-top: 10px;
+		}
+	}
+	.inputs {
+		.custom-input {
+			position: relative;
+		}
+		i {
+			position: absolute;
+			font-size: 19px;
+			color: $lightDefault;
+			top: 7px;
+			left: 15px;
+			color: $gray;
+		}
+	}
+	.form-control {
+		padding-left: 45px;
+	}
+	.list-group {
+		a {
+			display: flex;
+			justify-content: space-between;
+			color: $gray;
+		}
+	}
+	.support {
+		padding-top: 6%;
+		h6 {
+			font-size: 23px;
+			font-weight: bold;
+		}
+		a {
+			font-size: 16px;
+			padding-top: 10px;
+			display: block;
+			cursor: pointer;
+			color: $gray;
+			&:hover {
+				color: $orange;
+				transition: 0.5s;
+				opacity: 0.5s;
+			}
+		}
+	}
 }
 
