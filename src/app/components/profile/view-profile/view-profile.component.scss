@@ -34,6 +34,12 @@
 			display: flex;
 			justify-content: space-between;
 			color: $gray;
+			border: 1px solid #cac9c9;
+		}
+		i{
+			font-size: 15px;
+			color: $gray;
+			padding-top: 5px;
 		}
 	}
 	.support {

@@ -1,0 +1,19 @@
+@import '/src/styles.scss';
+
+.experience-listing{
+    padding: 5% 0 20% 0;
+}
+
+.experience-listing h3{
+    font-size: 25px;
+	font-weight: bold;
+}
+
+.experience-listing a{
+    float: right;
+}
+
+.experience-listing i{
+    font-size: 25px;
+	color: $lightDefault;
+}
