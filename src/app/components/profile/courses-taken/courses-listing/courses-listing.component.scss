@@ -7,46 +7,51 @@
 		font-weight: bold;
 	}
 	a {
-		float: right;
+    color: $white;
+    font-size: 16px;
+    border: 1px solid $lightDefault;
+    background-color: $lightDefault;
+    border-radius: 20px;
+    padding: 5px 10px;
+    i {
+      font-size: 15px;
+      padding-right: 8px;
+      color: $white;
+      position: relative;
+      top: 4px;
+    }
 	}
-	i {
-		font-size: 25px;
-		color: $lightDefault;
-		&:hover {
-			color: orange;
-			transition: 0.5s;
-			opacity: 0.5s;
-		}
-	}
-	.main-inner {
-		padding-top: 5%;
-		.inner {
-			padding-top: 5%;
-		}
-	}
-	.inner {
-		img {
-			width: 100px;
-			height: 100px;
-			object-fit: cover;
-			object-position: center;
-		}
-		h6 {
-			font-weight: bold;
-			font-size: 18px;
-		}
-		p {
-			color: $gray;
-			font-size: 15px;
-			padding-top: 5px;
-			font-weight: bold;
-		}
-		.list {
-			span {
-				font-size: 14px;
-				color: $gray;
-				padding: 0px 7px 0 2px;
-			}
-		}
+	.card-body {
+    .img-sec {
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .content-sec {
+      .head {
+        h6 {
+          font-weight: bold;
+          font-size: 18px;
+        }
+        p {
+          color: $gray;
+          font-size: 15px;
+        }
+      }
+      .list {
+        span {
+          font-size: 14px;
+          color: $gray;
+        }
+        p {
+          font-size: 14px;
+          color: $gray;
+        }
+      }
+    }
 	}
 }
