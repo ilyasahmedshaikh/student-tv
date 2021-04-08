@@ -12,10 +12,12 @@ import { ExperienceListingComponent } from './experiences/experience-listing/exp
 import { ExperienceDetailsComponent } from './experiences/experience-details/experience-details.component';
 import { CoursesDetailsComponent } from './courses-taken/courses-details/courses-details.component';
 import { CoursesListingComponent } from './courses-taken/courses-listing/courses-listing.component';
+import { StudiesListingComponent } from './studies/studies-listing/studies-listing.component';
+import { StudiesDetailsComponent } from './studies/studies-details/studies-details.component';
 
 
 @NgModule({
-  declarations: [ProfileComponent, CoursesTakenComponent, ExperiencesComponent, StudiesComponent, PrivacyPolicyComponent, ViewProfileComponent, ExperienceListingComponent, ExperienceDetailsComponent, CoursesDetailsComponent, CoursesListingComponent],
+  declarations: [ProfileComponent, CoursesTakenComponent, ExperiencesComponent, StudiesComponent, PrivacyPolicyComponent, ViewProfileComponent, ExperienceListingComponent, ExperienceDetailsComponent, CoursesDetailsComponent, CoursesListingComponent, StudiesListingComponent, StudiesDetailsComponent],
   imports: [
     CommonModule,
     ProfileRoutingModule

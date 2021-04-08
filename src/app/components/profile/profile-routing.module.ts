@@ -11,6 +11,8 @@ import { ExperienceListingComponent } from './experiences/experience-listing/exp
 import { ExperienceDetailsComponent } from './experiences/experience-details/experience-details.component';
 import { CoursesDetailsComponent } from './courses-taken/courses-details/courses-details.component';
 import { CoursesListingComponent } from './courses-taken/courses-listing/courses-listing.component';
+import { StudiesListingComponent } from './studies/studies-listing/studies-listing.component';
+import { StudiesDetailsComponent } from './studies/studies-details/studies-details.component';
 
 const routes: Routes = [
   {
@@ -67,15 +69,15 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: ExperienceListingComponent
+            component: StudiesListingComponent
           },
           {
-            path: 'experience-listing',
-            component: ExperienceListingComponent
+            path: 'studies-listing',
+            component: StudiesListingComponent
           },
           {
-            path: 'experience-details',
-            component: ExperienceDetailsComponent
+            path: 'studies-details',
+            component: StudiesDetailsComponent
           },
         ]
       },
