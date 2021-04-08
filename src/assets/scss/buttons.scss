@@ -8,3 +8,23 @@
     margin: auto;
     text-align: center;
 }
+
+.chip-icon-btn {
+  color: $white;
+  font-size: 16px;
+  border: 1px solid $lightDefault;
+  background-color: $lightDefault;
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: 200px;
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  i {
+    font-size: 15px;
+    padding-right: 8px;
+    color: $white;
+    position: relative;
+    top: 4px;
+  }
+}
