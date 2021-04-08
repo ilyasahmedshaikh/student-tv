@@ -1,0 +1,21 @@
+@import '/src/styles.scss';
+
+.experience-details {
+	padding: 5% 0 20% 0;
+	h3 {
+		font-size: 25px;
+		font-weight: bold;
+	}
+	a {
+		float: right;
+	}
+	i {
+		font-size: 25px;
+		color: $lightDefault;
+		&:hover {
+			color: orange;
+			transition: 0.5s;
+			opacity: 0.5s;
+		}
+	}
+}
