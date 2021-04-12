@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./components/profile/profile.module').then(m => m.ProfileModule)
   },
+  {
+    path: 'course-management',
+    loadChildren: () => import('./components/course-management/course-management.module').then(m => m.CourseManagementModule)
+  },
 ];
 
 @NgModule({
