@@ -163,21 +163,35 @@
       }
     }
     .reviews {
+      .review-inner{
+        padding: 10px 0;
+        h4{
+          font-size: 30px;
+          color: orange;
+          font-weight: bold;
+        }
+        span {
+          &.fa-star {
+            padding-right: 5px;
+            font-size: 13px;
+            color: $black;
+          }
+          &.checked {
+            color: orange;
+          }
+        }
+        p {
+          &.checked {
+            color: $black;
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+      }
       .left {
         span {
           font-size: 15px;
           color: $black;
-        }
-      }
-      .middle {
-        width: 100%;
-        border: 2px solid yellow;
-        border-radius: 20px;
-        .bar {
-          width: 80%;
-          height: 20px;
-          color: #0059b2;
-          background: #0059b2;
         }
       }
       .right {
@@ -188,5 +202,14 @@
         }
       }
     }
+  }
+}
+
+.progress {
+  border-radius: 30px;
+  position: relative;
+  top: 3px;
+  .progress-bar {
+    border-radius: 30px;
   }
 }
