@@ -3,11 +3,15 @@
 .terms-conditions {
 	padding: 5% 0;
 	img {
-		width: 40%;
+		width: 35%;
 		height: auto;
 	}
 	p {
 		font-size: 15px;
 		color:  $lightDefault;
 	}
+  h6{
+    font-size: 20px;
+    font-weight: bold;
+  }
 }
