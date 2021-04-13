@@ -1,0 +1,192 @@
+@import '/src/styles.scss';
+
+.course-detaisl {
+  .top-section {
+    background-color: #0059b2;
+    padding: 12px 0;
+    .course-heading {
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+        color: $white;
+      }
+    }
+    .review {
+      padding-top: 6px;
+      span {
+        &.fa-star {
+          padding-right: 5px;
+          font-size: 14px;
+          color: $white;
+        }
+        &.checked {
+          color: orange;
+        }
+        &.rating {
+          padding-left: 13px;
+          font-size: 15px;
+        }
+      }
+    }
+    .teacher {
+      padding-top: 10px;
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50px;
+      }
+      a {
+        font-size: 16px;
+        color: $white;
+      }
+      p {
+        border-radius: 20px;
+        padding: 5px;
+        margin-top: 5px;
+      }
+
+    }
+    .buy-btn {
+      a {
+        border-color: $white;
+        background: $white;
+        color: #0059b2;
+        font-weight: 600;
+      }
+    }
+  }
+  .info {
+    .scroll-section {
+      overflow: auto;
+      white-space: nowrap;
+      padding: 10px 0;
+      ul {
+        display: flex;
+        margin-bottom: 0px;
+        list-style: none;
+        padding-left: 0px;
+        li {
+          padding: 0 9px;
+          a {
+            text-decoration: none;
+            color: #717171;
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .about {
+      h6 {
+        font-size: 17px;
+        font-weight: 500;
+        color: $black;
+      }
+      p {
+        &.views {
+          padding-top: 4px;
+          font-size: 13px;
+          color: #717171;
+        }
+        &.content {
+          padding-top: 12px;
+          color: $black;
+          font-size: 15px;
+        }
+      }
+    }
+    .instructor {
+      h6 {
+        font-size: 18px;
+        font-weight: 500;
+        color: $black;
+      }
+      .review {
+        padding-top: 2px;
+        span {
+          &.fa-star {
+            padding-right: 5px;
+            font-size: 13px;
+            color: $black;
+          }
+          &.checked {
+            color: orange;
+          }
+          &.rating {
+            padding-left: 13px;
+            font-size: 14px;
+          }
+        }
+      }
+      .teacher {
+        padding-top: 20px;
+        .teacher-info {
+          img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50px;
+          }
+          a {
+            font-size: 16px;
+            color: $black;
+          }
+          p {
+            font-size: 13px;
+            color: #717171;
+          }
+        }
+        .teacher-details {
+          padding-top: 10px;
+          ul {
+            margin-bottom: 0px;
+            list-style: none;
+            padding-left: 0px;
+            li {
+              padding: 5px 0 0px 0;
+              p {
+                font-size: 15px;
+                color: black;
+                font-weight: 500;
+                i {
+                  font-size: 17px;
+                  color: black;
+                  padding-right: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .reviews {
+      .left {
+        span {
+          font-size: 15px;
+          color: $black;
+        }
+      }
+      .middle {
+        width: 100%;
+        border: 2px solid yellow;
+        border-radius: 20px;
+        .bar {
+          width: 80%;
+          height: 20px;
+          color: #0059b2;
+          background: #0059b2;
+        }
+      }
+      .right {
+        span {
+          float: right;
+          font-size: 15px;
+          color: $black;
+        }
+      }
+    }
+  }
+}
