@@ -26,9 +26,11 @@
   }
   .cards-scrollmenu {
     padding-top: 25px;
+    overflow: auto;
+    white-space: nowrap;
     .news-card {
       img {
-        width: 90%;
+        width: 100%;
         height: 170px;
         object-fit: cover;
         object-position: center;
@@ -44,6 +46,12 @@
         font-size: 19px;
         font-weight: 600;
         padding-top: 4px;
+        white-space: pre-wrap;
+      }
+    }
+    .col-12 {
+      &:first-child {
+        padding-left: 0;
       }
     }
   }
