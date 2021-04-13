@@ -1,0 +1,47 @@
+<div class="courses-listing">
+  <div class="container">
+
+    <div class="row top-bar">
+      <div class="col-5">
+        <div class="form-group">
+          <select id="inputState" class="form-control">
+            <option selected>Courses..</option>
+            <option>Course 1</option>
+            <option>Course 2</option>
+            <option>Course 3</option>
+            <option>Course 4</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-7 mt-1 pl-0 search-bar">
+          <input type="text" placeholder="Search courses..">
+          <i class="fas fa-search"></i>
+      </div>
+    </div>
+
+    <div class="card mt-2" *ngFor="let item of data">
+      <div class="card-body row p-3">
+        <div class="col-4">
+          <div class="img-sec">
+            <img src="{{item.image}}">
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="content-sec">
+              <div class="head">
+                <h6>{{item.title}}</h6>
+                <a href="#" class="pt-2"><strong>{{item.teacher}}</strong></a>
+              </div>
+
+              <div class="list">
+                  <span class="pr-2">{{item.lecture}}</span>
+                  <span>{{item.time}}</span>
+                  <p>{{item.students}}</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
