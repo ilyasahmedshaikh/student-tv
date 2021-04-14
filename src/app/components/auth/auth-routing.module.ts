@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AuthComponent } from './auth.component';
+import { StartupScreenComponent } from './startup-screen/startup-screen.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ForgotComponent } from './forgot/forgot.component';
@@ -14,7 +15,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: LoginComponent
+        component: StartupScreenComponent
+      },
+      {
+        path: 'startup-screen',
+        component: StartupScreenComponent
       },
       {
         path: 'login',
