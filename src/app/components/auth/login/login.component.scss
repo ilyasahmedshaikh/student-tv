@@ -6,23 +6,42 @@
 		width: 35%;
 		height: auto;
 	}
+  .forgot-checkout {
+    .forgot-btn {
+      a {
+        color: $default;
+        font-size: 17px;
+        // font-weight: 600;
+      }
+    }
+  }
 	.forgot-btn {
 		a {
-			color: $lightDefault;
+			color: $default;
 			font-size: 17px;
+      // font-weight: 600;
 		}
 	}
   .new-account {
     padding-top: 35px;
     span {
-      color: $black;
+      color: $lightDefault;
       font-size: 15px;
     }
     a {
       font-weight: 600;
       font-size: 16px;
       padding-left: 2px;
-      color: $black;
+      color: $default;
+    }
+  }
+}
+
+.form-group {
+  label {
+    &.form-check-label {
+      color: #007bff;
+      font-size: 17px;
     }
   }
 }
