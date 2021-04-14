@@ -12,7 +12,7 @@
       input {
         border-radius: 30px;
         padding: 3px 12px 3px 28px;
-        border-color: silver;
+        border: 1px solid #e7e7e7;
         width: 100%;
       }
       i {
@@ -29,7 +29,7 @@
     .img-sec {
       img {
         width: 100%;
-        height: 100px;
+        height: 115px;
         border-radius: 8px;
         object-fit: cover;
         object-position: center;
@@ -61,6 +61,15 @@
 }
 
 .form-control {
-  height: 43px;
+  &.dropdown-c {
+    height: 36px;
+    border-radius: 30px;
+  }
+}
+
+.progress {
   border-radius: 30px;
+  .progress-bar {
+    border-radius: 30px;
+  }
 }

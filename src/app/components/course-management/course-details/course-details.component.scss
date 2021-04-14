@@ -68,7 +68,10 @@
         list-style: none;
         padding-left: 0px;
         li {
-          padding: 0 9px;
+          padding: 5px 9px;
+          &.active {
+            border-bottom: 2px solid $blue;
+          }
           a {
             text-decoration: none;
             color: #717171;
@@ -95,6 +98,9 @@
           color: $black;
           font-size: 15px;
         }
+      }
+      a {
+        margin-top: 18px;
       }
     }
     .instructor {

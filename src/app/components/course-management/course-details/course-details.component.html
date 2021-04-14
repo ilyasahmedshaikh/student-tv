@@ -34,35 +34,36 @@
     <div class="container">
       <div class="row scroll-section">
         <ul>
-          <li>
+          <li [ngClass]="{'active': tab==1}">
             <a (click)="opentab(1)">About</a>
           </li>
-          <li>
+          <li [ngClass]="{'active': tab==2}">
             <a (click)="opentab(2)">Instructor</a>
           </li>
-          <li>
+          <li [ngClass]="{'active': tab==3}">
             <a (click)="opentab(3)">Reviews</a>
           </li>
-          <li>
+          <li [ngClass]="{'active': tab==4}">
             <a (click)="opentab(4)">Comments</a>
           </li>
-          <li>
+          <li [ngClass]="{'active': tab==5}">
             <a (click)="opentab(5)">FAQ</a>
           </li>
-          <li>
+          <li [ngClass]="{'active': tab==6}">
             <a (click)="opentab(6)">Classes</a>
           </li>
-          <li>
+          <li [ngClass]="{'active': tab==7}">
             <a (click)="opentab(7)">Tests</a>
           </li>
         </ul>
       </div>
 
-      <div class="row pt-2" *ngIf="tab==1">
-        <div class="col-12 about">
+      <div class="row about pt-2" *ngIf="tab==1">
+        <div class="col-12">
           <h6>About this Course</h6>
           <p class="views"><strong>1509 recent views</strong></p>
           <p class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+          <a class="rounded-btn w-100">Apply as a Teacher</a>
         </div>
       </div>
 
@@ -276,6 +277,13 @@
         <div class="faq-inner">
           <h6>FAQ.</h6>
           <p>I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth the master-builder of human happiness because it is pleasure.</p>
+          <form class="pt-4 pb-3">
+            <div class="form-group">
+              <!-- <label>Any Question</label> -->
+              <textarea class="form-control" rows="4" placeholder="Type your question here.."></textarea>
+              <a class="rounded-btn w-50 mt-4">Ask a Question</a>
+            </div>
+          </form>
         </div>
       </div>
 
@@ -285,7 +293,8 @@
               <h6>Classes</h6>
           </div>
           <div class="col-6">
-              <a href="#" class="chip-icon-btn">
+              <input class="d-none" type="file" accept="video/*" #file>
+              <a (click)="file.click()" class="chip-icon-btn">
                 <i class="fas fa-plus"></i>
                 Add
               </a>
