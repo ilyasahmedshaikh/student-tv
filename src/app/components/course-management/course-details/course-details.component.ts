@@ -31,19 +31,19 @@ export class CourseDetailsComponent implements OnInit {
     this.test = [
       {
         test: 'Test 1',
-        date: 'Due Date - 14/4/2021'
+        date: '14/4/2021'
       },
       {
         test: 'Test 2',
-        date: 'Due Date - 10/2/2020'
+        date: '10/2/2020'
       },
       {
         test: 'Test 3',
-        date: 'Due Date - 22/6/2020'
+        date: '22/6/2020'
       },
       {
         test: 'Test 4',
-        date: 'Due Date - 18/9/2028'
+        date: '18/9/2028'
       }
     ]
   }
