@@ -49,6 +49,12 @@
           <li>
             <a (click)="opentab(5)">FAQ</a>
           </li>
+          <li>
+            <a (click)="opentab(6)">Classes</a>
+          </li>
+          <li>
+            <a (click)="opentab(7)">Tests</a>
+          </li>
         </ul>
       </div>
 
@@ -238,6 +244,45 @@
 
       </div>
 
+      <div class="classes pt-2" *ngIf="tab==6">
+        <div class="row head-bar">
+          <div class="col-6">
+              <h6>Classes</h6>
+          </div>
+          <div class="col-6">
+              <a href="#" class="chip-icon-btn">
+                <i class="fas fa-plus"></i>
+                Add
+              </a>
+          </div>
+        </div>
+        <div class="card mt-3" routerLink="/course-management/class-details">
+          <div class="card-body p-3 d-flex justify-content-between">
+              <p>Class 1</p>
+              <i class="fas fa-arrow-right text-muted"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="tests pt-2" *ngIf="tab==7">
+        <div class="row head-bar">
+          <div class="col-6">
+              <h6>Tests</h6>
+          </div>
+          <div class="col-6">
+              <a href="#" class="chip-icon-btn">
+                <i class="fas fa-plus"></i>
+                Add
+              </a>
+          </div>
+        </div>
+        <div class="card mt-3" routerLink="/course-management/test-details">
+          <div class="card-body p-3 d-flex justify-content-between">
+              <p>Test 1</p>
+              <i class="fas fa-arrow-right text-muted"></i>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
