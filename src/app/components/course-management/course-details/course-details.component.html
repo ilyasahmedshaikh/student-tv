@@ -291,12 +291,14 @@
               </a>
           </div>
         </div>
-        <div class="card mt-3" routerLink="/course-management/class-details">
+
+        <div class="card mt-3" *ngFor="let item of list" routerLink="/course-management/class-details">
           <div class="card-body p-3 d-flex justify-content-between">
-              <p>Class 1</p>
+              <p>{{item.class}}</p>
               <i class="fas fa-eye"></i>
           </div>
         </div>
+
       </div>
 
       <div class="tests pt-2" *ngIf="tab==7">
@@ -311,13 +313,17 @@
               </a>
           </div>
         </div>
-        <div class="card mt-3" routerLink="/course-management/test-details">
+        <div class="card mt-3" *ngFor="let item of test" routerLink="/course-management/test-details">
           <div class="card-body p-3 d-flex justify-content-between">
-              <p>Test 1</p>
+              <div class="date">
+                <p>{{item.test}}</p>
+                <p class="pt-1">{{item.date}}</p>
+              </div>
               <i class="fas fa-arrow-right text-muted"></i>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>
