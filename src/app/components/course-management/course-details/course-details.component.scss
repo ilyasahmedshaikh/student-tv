@@ -239,6 +239,53 @@
         }
       }
     }
+    .classes {
+      .head-bar {
+        position: relative;
+        h6 {
+          font-size: 18px;
+          font-weight: 500;
+          color: $black;
+          position: absolute;
+          top: 10px;
+        }
+      }
+      .card-body {
+        p {
+          font-size: 18px;
+          color: $black;
+        }
+        i {
+          font-size: 17px;
+          position: relative;
+          top: 5px;
+          color: $gray;
+        }
+      }
+    }
+    .tests {
+      .head-bar {
+        position: relative;
+        h6 {
+          font-size: 18px;
+          font-weight: 500;
+          color: $black;
+          position: absolute;
+          top: 10px;
+        }
+      }
+      .card-body {
+        p {
+          font-size: 18px;
+          color: $black;
+        }
+        i {
+          font-size: 17px;
+          position: relative;
+          top: 5px;
+        }
+      }
+    }
   }
 }
 

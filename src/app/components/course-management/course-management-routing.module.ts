@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { CourseManagementComponent } from './course-management.component';
 import { CoursesListingComponent } from './courses-listing/courses-listing.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import { ClassDetailsComponent } from './class-details/class-details.component';
+import { TestDetailsComponent } from './test-details/test-details.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,14 @@ const routes: Routes = [
       {
         path: 'course-details',
         component: CourseDetailsComponent
+      },
+      {
+        path: 'class-details',
+        component: ClassDetailsComponent
+      },
+      {
+        path: 'test-details',
+        component: TestDetailsComponent
       }
     ]
   },

@@ -5,10 +5,12 @@ import { CourseManagementRoutingModule } from './course-management-routing.modul
 import { CourseManagementComponent } from './course-management.component';
 import { CoursesListingComponent } from './courses-listing/courses-listing.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import { ClassDetailsComponent } from './class-details/class-details.component';
+import { TestDetailsComponent } from './test-details/test-details.component';
 
 
 @NgModule({
-  declarations: [CourseManagementComponent, CoursesListingComponent, CourseDetailsComponent],
+  declarations: [CourseManagementComponent, CoursesListingComponent, CourseDetailsComponent, ClassDetailsComponent, TestDetailsComponent],
   imports: [
     CommonModule,
     CourseManagementRoutingModule
