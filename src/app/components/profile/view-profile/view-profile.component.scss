@@ -4,13 +4,21 @@
 	padding: 5% 0px 18% 0;
 	.avatar {
 		text-align: center;
-		img {
-			width: 120px;
-			height: 120px;
-		}
+    .add-img {
+      img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        object-position: center;
+        box-shadow: 0 0 10px #e7e7e7;
+        border-radius: 25px;
+      }
+    }
 		h3 {
-			font-size: 22px;
-			padding-top: 10px;
+      &.heading {
+        font-size: 22px;
+			  padding-top: 18px;
+      }
 		}
 	}
 	.inputs {
