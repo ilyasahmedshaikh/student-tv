@@ -202,6 +202,43 @@
         }
       }
     }
+    .comments{
+      padding: 5px 0 20px 0;
+      .comment-inner{
+        margin-top: 5%;
+        span {
+          &.fa-star {
+            padding-right: 5px;
+            font-size: 13px;
+            color: $black;
+          }
+          &.checked {
+            color: orange;
+          }
+        }
+        h6{
+          padding-top: 5px;
+          font-weight: bold;
+          font-size: 14px;
+        }
+        p{
+          padding-top: 15px;
+          font-size: 15px;
+        }
+      }
+    }
+    .faq{
+      .faq-inner{
+        h6{
+          font-size: 25px;
+          font-weight: bold;
+        }
+        p{
+          font-size: 15px;
+          padding-top: 10px;
+        }
+      }
+    }
   }
 }
 
