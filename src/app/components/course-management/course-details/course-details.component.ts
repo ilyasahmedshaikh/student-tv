@@ -7,11 +7,45 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseDetailsComponent implements OnInit {
 
+  list: any = [];
+  test: any = [];
   tab: any = 1;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.list = [
+      {
+        class: 'Class 1'
+      },
+      {
+        class: 'Class 2'
+      },
+      {
+        class: 'Class 3'
+      },
+      {
+        class: 'Class 4'
+      }
+    ]
+    this.test = [
+      {
+        test: 'Test 1',
+        date: 'Due Date - 14/4/2021'
+      },
+      {
+        test: 'Test 2',
+        date: 'Due Date - 10/2/2020'
+      },
+      {
+        test: 'Test 3',
+        date: 'Due Date - 22/6/2020'
+      },
+      {
+        test: 'Test 4',
+        date: 'Due Date - 18/9/2028'
+      }
+    ]
   }
 
   opentab(num: any) {
