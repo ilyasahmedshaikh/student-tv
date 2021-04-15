@@ -7,10 +7,11 @@ import { CoursesListingComponent } from './courses-listing/courses-listing.compo
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { ClassDetailsComponent } from './class-details/class-details.component';
 import { TestDetailsComponent } from './test-details/test-details.component';
+import { AddNewQuestionComponent } from './add-new-question/add-new-question.component';
 
 
 @NgModule({
-  declarations: [CourseManagementComponent, CoursesListingComponent, CourseDetailsComponent, ClassDetailsComponent, TestDetailsComponent],
+  declarations: [CourseManagementComponent, CoursesListingComponent, CourseDetailsComponent, ClassDetailsComponent, TestDetailsComponent, AddNewQuestionComponent],
   imports: [
     CommonModule,
     CourseManagementRoutingModule
