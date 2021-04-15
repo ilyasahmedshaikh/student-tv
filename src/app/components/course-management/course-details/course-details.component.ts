@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CourseDetailsComponent implements OnInit {
 
   list: any = [];
+  teacher: any = [];
   test: any = [];
   tab: any = 1;
 
@@ -45,6 +46,23 @@ export class CourseDetailsComponent implements OnInit {
         test: 'Test 4',
         date: '18/9/2028'
       }
+    ]
+    this.teacher = [
+      {
+        img: '../../../../assets/img/man.jpg',
+        name: 'Yaakov Chaikin',
+        education: 'Adjunct Professor, Graduate Computer Science',
+      },
+      {
+        img: '../../../../assets/img/profile.png',
+        name: 'Lucas Milano',
+        education: 'Assistant Professor, Graduate Computer Science',
+      },
+      {
+        img: '../../../../assets/img/man.jpg',
+        name: 'Yaakov Chaikin',
+        education: 'Adjunct Professor, Graduate Computer Science',
+      },
     ]
   }
 

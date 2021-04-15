@@ -104,31 +104,9 @@
       }
     }
     .instructor {
-      h6 {
-        font-size: 18px;
-        font-weight: 500;
-        color: $black;
-      }
-      .review {
-        padding-top: 2px;
-        span {
-          &.fa-star {
-            padding-right: 5px;
-            font-size: 13px;
-            color: $black;
-          }
-          &.checked {
-            color: orange;
-          }
-          &.rating {
-            padding-left: 13px;
-            font-size: 14px;
-          }
-        }
-      }
       .teacher {
-        padding-top: 20px;
         .teacher-info {
+          padding-top: 9px;
           img {
             width: 60px;
             height: 60px;
@@ -143,27 +121,6 @@
           p {
             font-size: 13px;
             color: #717171;
-          }
-        }
-        .teacher-details {
-          padding-top: 10px;
-          ul {
-            margin-bottom: 0px;
-            list-style: none;
-            padding-left: 0px;
-            li {
-              padding: 5px 0 0px 0;
-              p {
-                font-size: 15px;
-                color: black;
-                font-weight: 500;
-                i {
-                  font-size: 17px;
-                  color: black;
-                  padding-right: 8px;
-                }
-              }
-            }
           }
         }
       }
