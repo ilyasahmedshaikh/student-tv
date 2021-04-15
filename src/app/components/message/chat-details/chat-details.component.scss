@@ -1,0 +1,36 @@
+@import '/src/styles.scss';
+
+.chat-detail {
+	.head-bar {
+		padding: 13px 12px;
+		background: #e0e0e0;
+		i {
+			font-size: 20px;
+		}
+		h4 {
+			font-size: 20px;
+		}
+	}
+	.card-inner {
+		padding-top: 15px;
+		.avatar {
+			img {
+				width: 50px;
+				height: 50px;
+				border-radius: 50px;
+			}
+		}
+		.left-msg {
+			background-color: #d5efd5;
+			font-size: 14px;
+			padding: 12px 10px;
+			border-radius: 8px;
+		}
+		.right-msg {
+			background-color: aquamarine;
+			font-size: 14px;
+			padding: 12px 10px;
+			border-radius: 8px;
+		}
+	}
+}
