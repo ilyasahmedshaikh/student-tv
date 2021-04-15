@@ -1,0 +1,40 @@
+@import '/src/styles.scss';
+
+.chat {
+	.head-bar {
+		padding: 13px 12px;
+		background: #e0e0e0;
+		i {
+			font-size: 20px;
+		}
+		h4 {
+			font-size: 20px;
+		}
+	}
+	.card-inner {
+		padding: 15px 0;
+		border-bottom: 1px solid #eaeaea;
+		img {
+			width: 60px;
+			height: 60px;
+			border-radius: 50px;
+		}
+		h6 {
+			font-weight: bold;
+			font-size: 16px;
+		}
+		p {
+			font-size: 13px;
+			padding-top: 5px;
+		}
+		small {
+			padding: 0 10px;
+		}
+	}
+}
+
+
+
+
+
+
