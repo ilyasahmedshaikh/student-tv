@@ -22,6 +22,10 @@ const routes: Routes = [
     path: 'course-management',
     loadChildren: () => import('./components/course-management/course-management.module').then(m => m.CourseManagementModule)
   },
+  {
+    path: 'message',
+    loadChildren: () => import('./components/message/message.module').then(m => m.MessageModule)
+  }
 ];
 
 @NgModule({
