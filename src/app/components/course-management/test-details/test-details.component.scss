@@ -1,30 +1,28 @@
 @import '/src/styles.scss';
 
-.test-detail{
-  padding: 20px 0;
-}
-
-.test-detail .head-bar h6{
-  font-size: 19px;
-}
-
-.test-detail .main{
-  padding-top: 15px;
-}
-
-.test-detail .inner{
-  padding-top: 20px;
-}
-
-.test-detail .inner h5{
-  font-size: 17px;
-}
-
-.test-detail .inner .select-radio{
-  padding-top: 10px;
-}
-
-.test-detail .select-radio label{
-  padding-left: 7px;
-  font-size: 17px;
+.test-detail {
+	padding: 20px 0;
+	.head-bar {
+		h6 {
+			font-size: 19px;
+		}
+	}
+	.main {
+		padding-top: 15px;
+	}
+	.inner {
+		padding-top: 20px;
+		h5 {
+			font-size: 17px;
+		}
+		.select-radio {
+			padding-top: 10px;
+		}
+	}
+	.select-radio {
+		label {
+			padding-left: 7px;
+			font-size: 17px;
+		}
+	}
 }
