@@ -68,56 +68,15 @@
       </div>
 
       <div class="instructor pt-2" *ngIf="tab==2">
-        <div class="row">
-          <div class="col-12">
-            <h6>Instructor</h6>
-          <div class="review">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="rating checked"><strong>3.5 Rating</strong></span>
-          </div>
-          </div>
-        </div>
         <div class="teacher">
-          <div class="row teacher-info">
+          <div class="row teacher-info" *ngFor="let item of teacher">
             <div class="col-3">
-              <img src="../../../../assets/img/man.jpg">
+              <img src="{{item.img}}">
             </div>
             <div class="col-9 pl-0">
-              <a>Yaakov Chaikin</a>
-              <p>Adjunct Professor, Graduate Computer Science</p>
+              <a>{{item.name}}</a>
+              <p>{{item.education}}</p>
             </div>
-          </div>
-          <div class="teacher-details">
-            <ul>
-              <li>
-                <p>
-                  <i class="far fa-user"></i>
-                  231 Students
-                </p>
-              </li>
-              <li>
-                <p>
-                  <i class="far fa-copy"></i>
-                  02 Lectures
-                </p>
-              </li>
-              <li>
-                <p>
-                  <i class="fab fa-github"></i>
-                  GitHub
-                </p>
-              </li>
-              <li>
-                <p>
-                  <i class="fab fa-youtube"></i>
-                  YouTube
-                </p>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
@@ -295,7 +254,7 @@
           <div class="col-6">
               <input class="d-none" type="file" accept="video/*" #file>
               <a (click)="file.click()" class="chip-icon-btn">
-                <i class="fas fa-plus"></i>
+                <i class="fas fa-video"></i>
                 Add
               </a>
           </div>
@@ -332,7 +291,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
