@@ -1,16 +1,7 @@
 @import '/src/styles.scss';
 
 .chat-detail {
-	.head-bar {
-		padding: 13px 12px;
-		background: #e0e0e0;
-		i {
-			font-size: 20px;
-		}
-		h4 {
-			font-size: 20px;
-		}
-	}
+  position: relative;
 	.card-inner {
 		padding-top: 15px;
 		.avatar {
@@ -33,4 +24,31 @@
 			border-radius: 8px;
 		}
 	}
+  .chat-msg{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 65px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0px 0px 10px #00000014;
+    .icon-send{
+      position: relative;
+      i{
+        position: absolute;
+        top: 2px;
+        left: -5px;
+        font-size: 17px;
+        background-color: #1edc9c;
+        color: $white;
+        padding: 11px;
+        border-radius: 40px;
+      }
+    }
+
+  }
+}
+
+.form-control{
+  border-radius: 40px;
 }
