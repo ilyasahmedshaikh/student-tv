@@ -1,1 +1,23 @@
-<p>new-chat works!</p>
+<div class="new-chat">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12">
+        <div class="chat-inner"  *ngFor="let item of data">
+          <div class="row">
+            <div class="col-2 pr-0">
+              <div class="avatar">
+                <img src="{{item.image}}">
+              </div>
+            </div>
+            <div class="col-10 ">
+              <h6>{{item.name}} </h6>
+              <small>{{item.available}}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
