@@ -1,0 +1,21 @@
+@import '/src/styles.scss';
+
+.new-chat{
+  padding: 5px 0 10px 0;
+}
+
+.new-chat .chat-inner{
+  padding: 15px 0;
+  border-bottom: 1px solid #efefef;
+}
+
+.new-chat .chat-inner img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.new-chat .chat-inner h6{
+  font-weight: bold;
+  font-size: 18px;
+}
