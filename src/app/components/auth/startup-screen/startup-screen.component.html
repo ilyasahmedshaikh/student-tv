@@ -1,25 +1,31 @@
 <div class="login">
   <div class="container">
-      <div class="col-12 text-center">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-md-8 col-lg-4">
+        <div class="col-12 text-center">
           <img src="../../../../assets/img/logo.png">
+        </div>
+
+        <div class="btns">
+          <a href="https://www.google.com/" class="rounded-btn w-100">
+            <i class="fab fa-google"></i>
+            Continue with Google
+          </a>
+          <a class="rounded-btn w-100 mt-3" routerLink="/auth/login">
+            <i class="fas fa-sign-in-alt"></i>
+            Login
+          </a>
+        </div>
+
+        <div class="new-account text-center">
+          <span>Don't have an Account?</span>
+          <a routerLink="/auth/signup">
+            Register Now
+          </a>
+        </div>
       </div>
 
-      <div class="btns">
-        <a href="https://www.google.com/" class="rounded-btn w-100">
-          <i class="fab fa-google"></i>
-          Continue with Google
-        </a>
-        <a class="rounded-btn w-100 mt-3" routerLink="/auth/login">
-          <i class="fas fa-sign-in-alt"></i>
-          Login
-        </a>
-      </div>
-
-      <div class="new-account text-center">
-        <span>Don't have an Account?</span>
-        <a routerLink="/auth/signup">
-          Register Now
-        </a>
-      </div>
+    </div>
   </div>
 </div>

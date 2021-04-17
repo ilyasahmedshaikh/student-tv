@@ -30,7 +30,7 @@
     width: 100%;
     height: 65px;
     background: white;
-    padding: 10px;
+    padding: 10px 0px 0 40px;
     box-shadow: 0px 0px 10px #00000014;
     .icon-send{
       position: relative;
@@ -51,4 +51,28 @@
 
 .form-control{
   border-radius: 40px;
+}
+
+
+@media screen and (max-width: 1920px)
+{
+
+}
+
+@media screen and (max-width: 768px)
+{
+  .chat-detail{
+    .chat-msg{
+      padding: 10px 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px)
+{
+  .chat-detail{
+    .chat-msg{
+      padding: 10px;
+    }
+  }
 }
