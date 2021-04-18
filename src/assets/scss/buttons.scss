@@ -2,6 +2,9 @@
     border: 1px solid $blue;
     padding: 8px;
     background: $default;
+    width: 170px;
+    height: auto;
+    cursor: pointer;
     color: $white;
     border-radius: 50px;
     display: block;
@@ -16,6 +19,7 @@
   background: $default;
   border-radius: 20px;
   padding: 5px 15px;
+  cursor: pointer;
   width: 100px;
   float: right;
   display: flex;

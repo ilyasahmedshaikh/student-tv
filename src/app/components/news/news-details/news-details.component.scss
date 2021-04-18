@@ -5,7 +5,7 @@
     position: relative;
     img {
       width: 100%;
-      height: 200px;
+      height: 45vh;
       object-fit: cover;
       object-position: center;
       border-radius: 0 0 25px 25px;
@@ -21,7 +21,7 @@
         font-size: 20px;
         color: white;
         background-color: #485563;
-        margin-right: 13%;
+        margin-right: 45px;
       }
       &.fa-share-alt {
         position: absolute;
@@ -60,6 +60,51 @@
       line-height: 1.5;
       color: black;
       padding-top: 12px;
+    }
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 1920px)
+{
+
+}
+
+@media screen and (max-width: 768px)
+{
+  .news-details{
+    .main-img{
+      i{
+        &.fa-heart{
+          margin-right: 5%;
+        }
+        &.fa-share-alt{
+          right: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px)
+{
+  .news-details{
+    .main-img{
+      img{
+        width: 100%;
+        height: 200px;
+      }
+      i{
+        &.fa-heart{
+          margin-right: 30px;
+        }
+        &.fa-share-alt{
+          right: 10px;
+        }
+      }
     }
   }
 }
