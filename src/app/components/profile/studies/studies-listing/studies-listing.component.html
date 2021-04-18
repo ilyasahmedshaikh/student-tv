@@ -1,27 +1,31 @@
 <div class="studies-listing">
   <div class="container">
+    <div class="row justify-content-center">
 
-    <div class="row pb-4">
-      <div class="col-6">
-          <h3>Studies</h3>
+      <div class="col-12 col-md-10 col-lg-6">
+        <div class="row pb-4">
+          <div class="col-6">
+              <h3>Studies</h3>
+          </div>
+          <div class="col-6">
+              <a href="#" class="chip-icon-btn">
+                <i class="fas fa-plus"></i>
+                Add
+              </a>
+          </div>
+        </div>
+
+        <div class="card mt-3" routerLink="/profile/studies/studies-details" *ngFor="let item of data">
+          <div class="card-body">
+              <h6>
+                  <span>{{item.degree}}</span>
+                  <span class="text-muted float-right">{{item.dateFrom}} - {{item.dateTo}}</span>
+              </h6>
+              <p>{{item.designation}}</p>
+          </div>
+        </div>
       </div>
-      <div class="col-6">
-          <a href="#" class="chip-icon-btn">
-            <i class="fas fa-plus"></i>
-            Add
-          </a>
-      </div>
+
     </div>
-
-    <div class="card mt-3" routerLink="/profile/studies/studies-details" *ngFor="let item of data">
-      <div class="card-body">
-          <h6>
-              <span>{{item.degree}}</span>
-              <span class="text-muted float-right">{{item.dateFrom}} - {{item.dateTo}}</span>
-          </h6>
-          <p>{{item.designation}}</p>
-      </div>
-    </div>
-
   </div>
 </div>

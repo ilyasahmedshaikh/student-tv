@@ -1,9 +1,9 @@
 @import '/src/styles.scss';
 
 .terms-conditions {
-	padding: 5% 0;
+	padding: 20px 0;
 	img {
-		width: 35%;
+		width: 15%;
 		height: auto;
 	}
 	p {
@@ -14,4 +14,24 @@
     font-size: 20px;
     font-weight: bold;
   }
+}
+
+
+@media screen and (max-width: 1920px)
+{
+
+}
+
+@media screen and (max-width: 768px)
+{
+  .terms-conditions {
+    img {
+      width: 20%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px)
+{
+
 }
