@@ -11,3 +11,23 @@
 		font-weight: 500;
 	}
 }
+
+@media screen and (max-width: 1920px)
+{
+
+}
+
+@media screen and (max-width: 768px)
+{
+
+}
+
+@media screen and (max-width: 600px)
+{
+  .new-question{
+    .rounded-btn{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

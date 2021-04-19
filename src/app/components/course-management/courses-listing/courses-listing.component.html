@@ -1,48 +1,52 @@
 <div class="courses-listing">
   <div class="container">
+    <div class="row justify-content-center">
 
-    <div class="row top-bar">
-      <div class="col-5">
-        <div class="form-group">
-          <select class="form-control dropdown-c">
-            <option selected>My Courses</option>
-            <option>Favourites</option>
-            <option>Downloads</option>
-            <option>History</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-7 mt-1 pl-0 search-bar">
-          <input type="text" placeholder="Search courses..">
-          <i class="fas fa-search"></i>
-      </div>
-    </div>
-
-    <div class="card mt-2" *ngFor="let item of data" routerLink="/course-management/course-details">
-      <div class="card-body row p-3">
-        <div class="col-4">
-          <div class="img-sec">
-            <img src="{{item.image}}">
+      <div class="col-12 col-md-10 col-lg-12">
+        <div class="row top-bar">
+          <div class="col-5">
+            <div class="form-group">
+              <select class="form-control dropdown-c">
+                <option selected>My Courses</option>
+                <option>Favourites</option>
+                <option>Downloads</option>
+                <option>History</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-7 mt-1 pl-0 search-bar">
+              <input type="text" placeholder="Search courses..">
+              <i class="fas fa-search"></i>
           </div>
         </div>
-        <div class="col-8">
-          <div class="content-sec">
-              <div class="head">
-                <h6>{{item.title}}</h6>
-                <a class="pt-2"><strong>{{item.teacher}}</strong></a>
+
+        <div class="card mt-2" *ngFor="let item of data" routerLink="/course-management/course-details">
+          <div class="card-body row p-3">
+            <div class="col-4">
+              <div class="img-sec">
+                <img src="{{item.image}}">
               </div>
-              <div class="list">
-                  <span class="pr-2">{{item.lecture}}</span>
-                  <span>{{item.time}}</span>
-                  <p>{{item.students}}</p>
+            </div>
+            <div class="col-8">
+              <div class="content-sec">
+                  <div class="head">
+                    <h6>{{item.title}}</h6>
+                    <a class="pt-2"><strong>{{item.teacher}}</strong></a>
+                  </div>
+                  <div class="list">
+                      <span class="pr-2">{{item.lecture}}</span>
+                      <span>{{item.time}}</span>
+                      <p>{{item.students}}</p>
+                  </div>
+                  <div class="progress mt-2">
+                    <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">65%</div>
+                  </div>
               </div>
-              <div class="progress mt-2">
-                <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">65%</div>
-              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </div>

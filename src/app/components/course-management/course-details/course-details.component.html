@@ -17,16 +17,24 @@
         </div>
       </div>
       <div class="row teacher">
-        <div class="col-3">
+        <div class="col-3 col-md-2 col-lg-1">
           <img src="../../../../assets/img/man.jpg">
         </div>
-        <div class="col-9 pl-0">
-          <a>Yaakov Chaikin</a>
-          <p class="badge badge-success">Most Popular in App development</p>
+        <div class="col-9 col-md-10 col-lg-11 pl-0">
+          <div class="row">
+            <div class="col-12">
+              <a>Yaakov Chaikin</a>
+            </div>
+            <div class="col-12">
+              <p class="badge badge-success">Most Popular in App development</p>
+            </div>
+            <div class="col-12">
+              <div class="buy-btn pt-3">
+                <a class="rounded-btn">Buy Now</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="buy-btn pt-3">
-        <a class="rounded-btn w-50">Buy Now</a>
       </div>
     </div>
   </div>
@@ -63,17 +71,17 @@
           <h6>About this Course</h6>
           <p class="views"><strong>1509 recent views</strong></p>
           <p class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-          <a class="rounded-btn w-100">Apply as a Teacher</a>
+          <a class="rounded-btn">Apply as a Teacher</a>
         </div>
       </div>
 
       <div class="instructor pt-2" *ngIf="tab==2">
         <div class="teacher">
           <div class="row teacher-info" *ngFor="let item of teacher">
-            <div class="col-3">
+            <div class="col-3 col-md-2 col-lg-1">
               <img src="{{item.img}}">
             </div>
-            <div class="col-9 pl-0">
+            <div class="col-9 col-md-10 col-lg-11 pl-0">
               <a>{{item.name}}</a>
               <p>{{item.education}}</p>
             </div>
@@ -83,11 +91,11 @@
 
       <div class="reviews pt-2" *ngIf="tab==3">
         <div class="row review-inner">
-          <div class="col-3">
+          <div class="col-3 col-md-2 col-lg-1">
             <h4>4.8</h4>
           </div>
 
-          <div class="col-9">
+          <div class="col-9 col-md-10 col-lg-11">
             <div class="review-star">
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
@@ -100,95 +108,95 @@
         </div>
 
         <div class="row mt-2">
-          <div class="col-3">
+          <div class="col-3 col-md-2 col-lg-1">
             <div class="left">
               <span>5 stars</span>
             </div>
           </div>
-          <div class="col-7 px-0">
+          <div class="col-7 col-md-8 col-lg-8 px-0">
             <div class="middel">
               <div class="progress">
                 <div class="progress-bar" style="width:90%"></div>
               </div>
             </div>
           </div>
-          <div class="col-2">
+          <div class="col-2 col-md-2 col-lg-1">
             <div class="right">
               <span>95%</span>
             </div>
           </div>
         </div>
         <div class="row mt-2">
-          <div class="col-3">
+          <div class="col-3 col-md-2 col-lg-1">
             <div class="left">
               <span>4 stars</span>
             </div>
           </div>
-          <div class="col-7 px-0">
+          <div class="col-7 col-md-8 col-lg-8 px-0">
             <div class="middel">
               <div class="progress">
                 <div class="progress-bar" style="width:75%"></div>
               </div>
             </div>
           </div>
-          <div class="col-2">
+          <div class="col-2 col-md-2 col-lg-1">
             <div class="right">
               <span>75%</span>
             </div>
           </div>
         </div>
         <div class="row mt-2">
-          <div class="col-3">
+          <div class="col-3 col-md-2 col-lg-1">
             <div class="left">
               <span>3 stars</span>
             </div>
           </div>
-          <div class="col-7 px-0">
+          <div class="col-7 col-md-8 col-lg-8 px-0">
             <div class="middel">
               <div class="progress">
                 <div class="progress-bar" style="width:50%"></div>
               </div>
             </div>
           </div>
-          <div class="col-2">
+          <div class="col-2 col-md-2 col-lg-1">
             <div class="right">
               <span>50%</span>
             </div>
           </div>
         </div>
         <div class="row mt-2">
-          <div class="col-3">
+          <div class="col-3 col-md-2 col-lg-1">
             <div class="left">
               <span>2 stars</span>
             </div>
           </div>
-          <div class="col-7 px-0">
+          <div class="col-7 col-md-8 col-lg-8 px-0">
             <div class="middel">
               <div class="progress">
                 <div class="progress-bar" style="width:25%"></div>
               </div>
             </div>
           </div>
-          <div class="col-2">
+          <div class="col-2 col-md-2 col-lg-1">
             <div class="right">
               <span>25%</span>
             </div>
           </div>
         </div>
         <div class="row mt-2">
-          <div class="col-3">
+          <div class="col-3 col-md-2 col-lg-1">
             <div class="left">
               <span>1 stars</span>
             </div>
           </div>
-          <div class="col-7 px-0">
+          <div class="col-7 col-md-8 col-lg-8 px-0">
             <div class="middel">
               <div class="progress">
                 <div class="progress-bar" style="width:10%"></div>
               </div>
             </div>
           </div>
-          <div class="col-2">
+          <div class="col-2 col-md-2 col-lg-1">
             <div class="right">
               <span>10%</span>
             </div>
@@ -232,62 +240,74 @@
         </div>
       </div>
 
-      <div class="faq pt-3" *ngIf="tab==5">
-        <div class="faq-inner">
-          <h6>FAQ.</h6>
-          <p>I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth the master-builder of human happiness because it is pleasure.</p>
-          <form class="pt-4 pb-3">
-            <div class="form-group">
-              <!-- <label>Any Question</label> -->
-              <textarea class="form-control" rows="4" placeholder="Type your question here.."></textarea>
-              <a class="rounded-btn w-50 mt-4">Ask a Question</a>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+          <div class="faq pt-3" *ngIf="tab==5">
+            <div class="faq-inner">
+              <h6>FAQ.</h6>
+              <p>I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth the master-builder of human happiness because it is pleasure.</p>
+              <form class="pt-4 pb-3">
+                <div class="form-group">
+                  <!-- <label>Any Question</label> -->
+                  <textarea class="form-control" rows="4" placeholder="Type your question here.."></textarea>
+                  <a class="rounded-btn mt-4">Ask a Question</a>
+                </div>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
       </div>
 
-      <div class="classes pt-2" *ngIf="tab==6">
-        <div class="row head-bar">
-          <div class="col-6">
-              <h6>Classes</h6>
-          </div>
-          <div class="col-6">
-              <input class="d-none" type="file" accept="video/*" #file>
-              <a (click)="file.click()" class="chip-icon-btn">
-                <i class="fas fa-video"></i>
-                Add
-              </a>
-          </div>
-        </div>
-
-        <div class="card mt-3" *ngFor="let item of list" routerLink="/course-management/class-details">
-          <div class="card-body p-3 d-flex justify-content-between">
-              <p>{{item.class}}</p>
-              <i class="fas fa-eye"></i>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="tests pt-2" *ngIf="tab==7">
-        <div class="row head-bar">
-          <div class="col-6">
-              <h6>Tests</h6>
-          </div>
-          <div class="col-6">
-              <a href="#" class="chip-icon-btn">
-                <i class="fas fa-plus"></i>
-                Add
-              </a>
-          </div>
-        </div>
-        <div class="card mt-3" *ngFor="let item of test" routerLink="/course-management/test-details">
-          <div class="card-body p-3 d-flex justify-content-between">
-              <div class="date">
-                <p>{{item.test}}</p>
-                <p class="text-black-50"><small>Due: {{item.date}}</small></p>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+          <div class="classes pt-2" *ngIf="tab==6">
+            <div class="row head-bar">
+              <div class="col-6">
+                  <h6>Classes</h6>
               </div>
-              <i class="fas fa-arrow-right text-muted"></i>
+              <div class="col-6">
+                  <input class="d-none" type="file" accept="video/*" #file>
+                  <a (click)="file.click()" class="chip-icon-btn">
+                    <i class="fas fa-video"></i>
+                    Add
+                  </a>
+              </div>
+            </div>
+
+            <div class="card mt-3" *ngFor="let item of list" routerLink="/course-management/class-details">
+              <div class="card-body p-3 d-flex justify-content-between">
+                  <p>{{item.class}}</p>
+                  <i class="fas fa-eye"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+          <div class="tests pt-2" *ngIf="tab==7">
+            <div class="row head-bar">
+              <div class="col-6">
+                  <h6>Tests</h6>
+              </div>
+              <div class="col-6">
+                  <a href="#" class="chip-icon-btn">
+                    <i class="fas fa-plus"></i>
+                    Add
+                  </a>
+              </div>
+            </div>
+            <div class="card mt-3" *ngFor="let item of test" routerLink="/course-management/test-details">
+              <div class="card-body p-3 d-flex justify-content-between">
+                  <div class="date">
+                    <p>{{item.test}}</p>
+                    <p class="text-black-50"><small>Due: {{item.date}}</small></p>
+                  </div>
+                  <i class="fas fa-arrow-right text-muted"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>

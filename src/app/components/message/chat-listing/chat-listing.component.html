@@ -19,30 +19,26 @@
 
   </div>
   <div class="container">
-
-    <div class="col-12">
       <div class="row">
-
-        <div class="card-inner" *ngFor="let item of data" routerLink="/message/chat-details">
-          <div class="row">
-            <div class="col-3">
-              <img src="{{item.image}}">
-            </div>
-
-            <div class="col-9">
-              <div class="row d-flex justify-content-between">
-                <h6>{{item.name}}</h6>
-                <small>{{item.time}}</small>
+        <div class="col-12">
+          <div class="card-inner" *ngFor="let item of data" routerLink="/message/chat-details">
+            <div class="row">
+              <div class="col-3 col-md-2 col-lg-1">
+                <img src="{{item.image}}">
               </div>
-              <div class="row">
-                <p>{{item.message}}</p>
+
+              <div class="col-9 col-md-10 col-lg-11">
+                <div class="row d-flex justify-content-between">
+                  <h6>{{item.name}}</h6>
+                  <small>{{item.time}}</small>
+                </div>
+                <div class="row">
+                  <p>{{item.message}}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
-    </div>
-
   </div>
 </div>

@@ -1,9 +1,10 @@
 @import '/src/styles.scss';
 
 .profile {
-	padding: 5% 0px 18% 0;
+	padding: 20px 0px 35px 0;
 	.avatar {
 		text-align: center;
+    cursor: pointer;
     .add-img {
       img {
         width: 180px;
@@ -50,7 +51,7 @@
 		}
 	}
 	.support {
-		padding-top: 6%;
+		padding-top: 20px;
 		h6 {
 			font-size: 23px;
 			font-weight: bold;
@@ -68,5 +69,26 @@
 			}
 		}
 	}
+}
+
+
+@media screen and (max-width: 1920px)
+{
+
+}
+
+@media screen and (max-width: 768px)
+{
+
+}
+
+@media screen and (max-width: 600px)
+{
+  .profile{
+    .rounded-btn{
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 

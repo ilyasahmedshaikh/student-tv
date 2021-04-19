@@ -1,7 +1,7 @@
 @import '/src/styles.scss';
 
 .news-listing {
-  padding: 15px 0;
+  padding: 20px 0;
   .top-head {
     p {
       font-size: 12px;
@@ -48,6 +48,7 @@
         font-weight: 600;
         padding-top: 4px;
         white-space: pre-wrap;
+        cursor: pointer;
       }
     }
     .col-12 {
@@ -73,7 +74,7 @@
     .recent-cards {
       img {
         width: 100%;
-        height: 135px;
+        height: auto;
         object-fit: cover;
         object-position: center;
         border-radius: 15px;
@@ -89,6 +90,31 @@
         font-weight: 600;
         padding-top: 4px;
         padding-right: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1920px)
+{
+
+}
+
+@media screen and (max-width: 768px)
+{
+
+}
+
+@media screen and (max-width: 600px)
+{
+  .news-listing{
+    .recent-news{
+      .recent-cards{
+        img{
+          margin-top: 20px;
+        }
       }
     }
   }

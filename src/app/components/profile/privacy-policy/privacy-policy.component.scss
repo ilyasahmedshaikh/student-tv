@@ -1,9 +1,9 @@
 @import '/src/styles.scss';
 
 .privacy-policy {
-	padding: 5% 0;
+	padding: 20px 0;
 	img {
-		width: 35%;
+    width: 15%;
 		height: auto;
 	}
 	p {
@@ -15,3 +15,24 @@
     font-weight: bold;
   }
 }
+
+
+@media screen and (max-width: 1920px)
+{
+
+}
+
+@media screen and (max-width: 768px)
+{
+  .privacy-policy {
+    img {
+      width: 20%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px)
+{
+
+}
+

@@ -6,4 +6,11 @@
 		font-size: 25px;
 		font-weight: bold;
 	}
+  .card{
+    .card-body{
+      h6{
+        cursor: pointer;
+      }
+    }
+  }
 }
