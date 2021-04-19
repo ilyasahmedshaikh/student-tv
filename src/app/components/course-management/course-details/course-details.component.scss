@@ -102,6 +102,7 @@
       }
       a {
         margin-top: 18px;
+        font-size: 15px;
       }
     }
     .instructor {
@@ -269,10 +270,8 @@
 {
   .course-detaisl{
     .top-section{
-      .buy-btn{
-        a{
-          padding: 10px 40px;
-        }
+      .rounded-btn{
+        float: left;
       }
     }
   }
@@ -285,6 +284,13 @@
 
 @media screen and (max-width: 600px)
 {
-
+  .course-detaisl{
+    .top-section{
+      .rounded-btn{
+        width: 60%;
+        height: auto;
+      }
+    }
+  }
 }
 
