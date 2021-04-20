@@ -1,11 +1,11 @@
-<div class="header py-3">
-    <div class="container">
+<div class="header">
+    <!-- <div class="container">
         <div class="toggleContainer" (click)="toggleMenu()" [ngClass]="{'change': toggleButton}">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <!-- <form>
+        <form>
           <div class="form-group mt-5">
             <select class="form-control">
               <option selected>My Courses</option>
@@ -15,11 +15,22 @@
             </select>
             <i class="far fa-user"></i>
           </div>
-        </form> -->
-    </div>
+        </form>
+    </div> -->
+    <form>
+      <div class="form-group mb-0">
+        <select class="form-control">
+          <option selected>My Courses</option>
+          <option>Favourites</option>
+          <option>Downloads</option>
+          <option>History</option>
+        </select>
+        <i class="far fa-user"></i>
+      </div>
+    </form>
 </div>
 
-<div class="sidebar side" [ngClass]="{'show': sidebar}">
+<!-- <div class="sidebar side" [ngClass]="{'show': sidebar}">
     <ul>
       <li>
         <a (click)="toggleMenu()" routerLink="/profile">
@@ -51,6 +62,6 @@
           <a href="tel:+923337148980"><i class="fas fa-question-circle"></i> Need Help ?</a>
       </div>
     </ul>
-</div>
+</div> -->
 
 <div class="fade-area"></div>
