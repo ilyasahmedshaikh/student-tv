@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CourseManagementRoutingModule } from './course-management-routing.module';
 import { CourseManagementComponent } from './course-management.component';
@@ -16,7 +17,9 @@ import { QuestionAnswersComponent } from './question-answers/question-answers.co
   declarations: [CourseManagementComponent, CoursesListingComponent, CourseDetailsComponent, ClassDetailsComponent, TestDetailsComponent, AddNewQuestionComponent, CreateCourseComponent, QuestionAnswersComponent],
   imports: [
     CommonModule,
-    CourseManagementRoutingModule
+    CourseManagementRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class CourseManagementModule { }

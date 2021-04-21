@@ -10,6 +10,8 @@ import { HeaderComponent } from './layout/header/header.component';
 import { TabBarComponent } from './layout/tab-bar/tab-bar.component';
 import { SliderComponent } from './layout/slider/slider.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   dayGridPlugin,
   // interactionPlugin
@@ -25,6 +27,8 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     FullCalendarModule // register FullCalendar with you app
   ],
   providers: [],
