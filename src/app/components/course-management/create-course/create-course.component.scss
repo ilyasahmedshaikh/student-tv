@@ -1,0 +1,14 @@
+@import '/src/styles.scss';
+
+.create-course {
+  form {
+    &.create-course-form {
+      padding: 7% 0 22% 0;
+      .btns {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

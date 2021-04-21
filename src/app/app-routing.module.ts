@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'message',
     loadChildren: () => import('./components/message/message.module').then(m => m.MessageModule)
+  },
+  {
+    path: 'calendar',
+    loadChildren: () => import('./components/calendar/calendar.module').then(m => m.CalendarModule)
   }
 ];
 

@@ -7,3 +7,23 @@
 		font-weight: bold;
 	}
 }
+
+@media screen and (max-width: 1920px)
+{
+
+}
+
+@media screen and (max-width: 768px)
+{
+
+}
+
+@media screen and (max-width: 600px)
+{
+  .studies-details{
+    .rounded-btn{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
