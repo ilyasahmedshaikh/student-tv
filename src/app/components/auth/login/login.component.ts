@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ConfigService } from '../../../core/http/config/config.service';
 import { PresentationalService } from '../../../core/services/presentational/presentational.service';
+import { CheckLoginService } from '../../../core/services/checkLogin/check-login.service';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,8 @@ export class LoginComponent implements OnInit {
     private http: HttpClient,
     private router: Router,
     private config: ConfigService,
-    private presentationalS: PresentationalService
+    private presentationalS: PresentationalService,
+    private checkLogin: CheckLoginService
   ) { }
 
   ngOnInit(): void {
@@ -45,6 +47,7 @@ export class LoginComponent implements OnInit {
 
     this.http.post(this.endpoint, data).subscribe((res: any) => {
       if (res) {
+        this.checkLogin.setData(res);
         this.config.setToken(res.token);
         this.router.navigateByUrl('/course-management');
       }

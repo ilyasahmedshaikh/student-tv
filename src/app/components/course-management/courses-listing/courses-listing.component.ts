@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import{ BackNavigateService } from '../../../core/services/back-navigate/back-navigate.service';
 import { PresentationalService } from '../../../core/services/presentational/presentational.service';
+import { HttpClient } from '@angular/common/http';
+import { ConfigService } from '../../../core/http/config/config.service';
 
 @Component({
   selector: 'app-courses-listing',
@@ -10,8 +12,11 @@ import { PresentationalService } from '../../../core/services/presentational/pre
 export class CoursesListingComponent implements OnInit {
 
   data: any = [];
+  endpoint: any = this.config.API_BASE_URL + '/api/courses/';
 
   constructor(
+    private http: HttpClient,
+    private config: ConfigService,
     private backNavigateService: BackNavigateService,
     private presentationalS: PresentationalService
   ) { }
@@ -19,6 +24,8 @@ export class CoursesListingComponent implements OnInit {
   ngOnInit(): void {
     this.presentationalS.setPresentation('header', true);
     this.presentationalS.setPresentation('bottomBar', true);
+
+    this.getCourses();
 
     this.data = [
       {
@@ -82,6 +89,17 @@ export class CoursesListingComponent implements OnInit {
 
   toggleBack(state?: any) {
     this.backNavigateService.toggleBackState(state);
+  }
+
+  getCourses() {
+    let data: any = {
+      page: 1,
+      size: 10
+    }
+
+    this.http.get(this.endpoint + '?page=' + data.page + '&size=' + data.size).subscribe(res => {
+      console.log(res);
+    })
   }
 
 }
