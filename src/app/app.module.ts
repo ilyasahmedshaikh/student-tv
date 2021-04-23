@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FullCalendarModule } from '@fullcalendar/angular'; // the main connector. must go first
-import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin
-// import interactionPlugin from '@fullcalendar/interaction'; // a plugin
+import { HttpClientModule } from '@angular/common/http';
+
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid';
+// import interactionPlugin from '@fullcalendar/interaction';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +14,7 @@ import { SliderComponent } from './layout/slider/slider.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-FullCalendarModule.registerPlugins([ // register FullCalendar plugins
+FullCalendarModule.registerPlugins([
   dayGridPlugin,
   // interactionPlugin
 ]);
@@ -29,7 +31,8 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    FullCalendarModule // register FullCalendar with you app
+    FullCalendarModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
