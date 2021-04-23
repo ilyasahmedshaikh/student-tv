@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ConfigService } from '../../../core/http/config/config.service';
+import{ BackNavigateService } from '../../../core/services/back-navigate/back-navigate.service';
+import { PresentationalService } from '../../../core/services/presentational/presentational.service';
 
 @Component({
   selector: 'app-signup',
@@ -16,10 +18,15 @@ export class SignupComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
-    private config: ConfigService
+    private config: ConfigService,
+    private backNavigateService: BackNavigateService,
+    private presentationalS: PresentationalService
   ) { }
 
   ngOnInit(): void {
+    this.presentationalS.setPresentation('header', false);
+    this.presentationalS.setPresentation('bottomBar', false);
+    
     this.formInit();
   }
 

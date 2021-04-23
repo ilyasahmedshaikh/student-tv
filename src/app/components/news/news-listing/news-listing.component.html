@@ -14,7 +14,7 @@
         </div>
 
         <div class="cards-scrollmenu d-flex">
-          <div class="col-12 col-md-8 col-lg-6" routerLink="/news/news-details" *ngFor="let item of data">
+          <div class="col-12 col-md-8 col-lg-6" routerLink="/news/news-details" *ngFor="let item of data" (click)="toggleBack(true)">
            <div class="news-card">
             <img src="{{item.image}}">
             <p>{{item.title}}</p>
@@ -31,17 +31,7 @@
             <a>See All</a>
           </div>
           <div class="row recent-cards">
-            <div class="col-12 col-md-4 col-lg-4" routerLink="/news/news-details">
-              <img src="../../../../assets/img/course5.jpg">
-              <p>STARTUPS</p>
-              <h1>Top startups that are the changing the way we travel</h1>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4" routerLink="/news/news-details">
-              <img src="../../../../assets/img/course5.jpg">
-              <p>STARTUPS</p>
-              <h1>Top startups that are the changing the way we travel</h1>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4" routerLink="/news/news-details">
+            <div class="col-12 col-md-4 col-lg-4" routerLink="/news/news-details" (click)="toggleBack(true)">
               <img src="../../../../assets/img/course5.jpg">
               <p>STARTUPS</p>
               <h1>Top startups that are the changing the way we travel</h1>

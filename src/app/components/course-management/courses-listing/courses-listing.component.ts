@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import{ BackNavigateService } from '../../../core/services/back-navigate/back-navigate.service';
+import { PresentationalService } from '../../../core/services/presentational/presentational.service';
 
 @Component({
   selector: 'app-courses-listing',
@@ -9,9 +11,15 @@ export class CoursesListingComponent implements OnInit {
 
   data: any = [];
 
-  constructor() { }
+  constructor(
+    private backNavigateService: BackNavigateService,
+    private presentationalS: PresentationalService
+  ) { }
 
   ngOnInit(): void {
+    this.presentationalS.setPresentation('header', true);
+    this.presentationalS.setPresentation('bottomBar', true);
+
     this.data = [
       {
         image: '../../../../assets/img/course4.jpg',
@@ -70,6 +78,10 @@ export class CoursesListingComponent implements OnInit {
         students: '100 Students',
       }
     ]
+  }
+
+  toggleBack(state?: any) {
+    this.backNavigateService.toggleBackState(state);
   }
 
 }

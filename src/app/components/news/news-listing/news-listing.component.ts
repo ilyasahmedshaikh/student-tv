@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{ BackNavigateService } from '../../../core/services/back-navigate/back-navigate.service';
 
 @Component({
   selector: 'app-news-listing',
@@ -9,7 +10,9 @@ export class NewsListingComponent implements OnInit {
 
   data: any = [];
 
-  constructor() { }
+  constructor(
+    private backNavigateService: BackNavigateService,
+  ) { }
 
   ngOnInit(): void {
     this.data = [
@@ -44,6 +47,10 @@ export class NewsListingComponent implements OnInit {
         heading: 'Top startups that are the changing the way we travel',
       }
     ]
+  }
+
+  toggleBack(state?: any) {
+    this.backNavigateService.toggleBackState(state);
   }
 
 }
