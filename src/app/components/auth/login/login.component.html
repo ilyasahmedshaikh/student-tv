@@ -8,15 +8,15 @@
             <img src="../../../../assets/img/logo.png">
           </div>
 
-          <form class="pt-3">
+          <form class="pt-3" [formGroup]="programForm">
               <div class="form-group">
                   <label>Email</label>
-                  <input type="email" class="form-control" placeholder="Email">
+                  <input type="email" class="form-control" placeholder="Email" formControlName="email">
               </div>
 
               <div class="form-group">
                   <label>Password</label>
-                  <input type="password" class="form-control" placeholder="Password">
+                  <input type="password" class="form-control" placeholder="Password" formControlName="password">
               </div>
 
               <div class="row forgot-checkout pt-2">
@@ -34,7 +34,7 @@
                   </div>
               </div>
 
-              <a class="rounded-btn">Login</a>
+              <a class="rounded-btn" (click)="login()">Login</a>
           </form>
           <div class="new-account text-center">
             <span>Don't have an Account?</span>
