@@ -11,6 +11,7 @@ import { ConfigService } from '../../../core/http/config/config.service';
 export class SignupComponent implements OnInit {
 
   programForm: any = FormGroup;
+  endpoint: any = this.config.API_BASE_URL + '/register';
 
   constructor(
     private fb: FormBuilder,
@@ -24,8 +25,8 @@ export class SignupComponent implements OnInit {
 
   formInit() {
     this.programForm = this.fb.group({
-      name: ['', Validators.required],
-      surname: ['', Validators.required],
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required],
@@ -33,27 +34,8 @@ export class SignupComponent implements OnInit {
   }
 
   signup() {
-    let user = {
-      "accountNonExpired": true,
-      "accountNonLocked": true,
-      "authorities": [
-        {
-          "authority": "string"
-        }
-      ],
-      "avatar": "string",
-      "credentialsNonExpired": true,
-      "enabled": true,
-      "firstName": "string",
-      "id": 0,
-      "lastName": "string",
-      "password": "string",
-      "status": "string",
-      "userName": "string",
-    }
-
-    this.http.post(this.config.API_BASE_URL + '/register', user).subscribe(res => {
-      console.log(res);
+    this.http.post(this.endpoint, this.programForm.value).subscribe(res => {
+      if(res) alert('Signup Success');
     })
   }
 
