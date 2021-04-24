@@ -28,11 +28,11 @@
               <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm Password">
             </div>
 
-              <a class="rounded-btn mt-4" (click)="signup()"
-                [disabled]="programForm.invalid" 
+              <button class="rounded-btn mt-4" (click)="signup()"
+                [disabled]="programForm.invalid"
                 [ngClass]="{'disable-opacity': programForm.invalid}">
                 Register Now
-              </a>
+              </button>
           </form>
           <div class="conditions">
             <p>By signing up you accept the <a routerLink="/profile/privacy-policy">Privacy Policy</a> and <a routerLink="/auth/terms-conditions">Terms & Conditions</a></p>
