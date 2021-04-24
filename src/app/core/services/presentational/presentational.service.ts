@@ -11,7 +11,7 @@ export class PresentationalService {
 
   constructor() { }
 
-  setPresentation(componentType, flag) {
+  setPresentation(componentType: any, flag: any) {
     if(componentType == 'header') this.header.next(flag);
     if(componentType == 'bottomBar') this.bottomBar.next(flag);
   }
