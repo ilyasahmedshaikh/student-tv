@@ -44,11 +44,15 @@ export class ForgotComponent implements OnInit {
 
     this.http.post(this.endpoint, data).subscribe((res: any) => {
       if (res) {
-        console.log(res);
+        this.router.navigate(['/auth/reset-password'], { state: { data: {code: res, email: this.programForm.value.email} } });
       }
     },
     (error) => {
-      alert(error.message);
+      if (error.status == 200) {
+        console.log(error);
+        
+        this.router.navigate(['/auth/reset-password'], { state: { data: {code: error.error.text, email: this.programForm.value.email} } });
+      }
     })
   }
 
