@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ConfigService } from '../../../core/http/config/config.service';
@@ -20,6 +21,7 @@ export class SignupComponent implements OnInit {
     private fb: FormBuilder,
     private http: HttpClient,
     private router: Router,
+    private location: Location,
     private config: ConfigService,
     private backNavigateService: BackNavigateService,
     private presentationalS: PresentationalService
@@ -28,7 +30,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
     this.presentationalS.setPresentation('header', false);
     this.presentationalS.setPresentation('bottomBar', false);
-    
+
     this.formInit();
   }
 
@@ -58,6 +60,10 @@ export class SignupComponent implements OnInit {
         alert(error.response.data);
       }
     })
+  }
+
+  back() {
+    this.location.back();
   }
 
 }
