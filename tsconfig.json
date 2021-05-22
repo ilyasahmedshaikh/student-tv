@@ -7,7 +7,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,
-    "noImplicitAny": false,
+    "noImplicitAny": false, # added bcz of an error on heroku
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
