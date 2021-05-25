@@ -16,11 +16,11 @@
               <input type="text" class="form-control" formControlName="verificationCode" placeholder="Verification Code">
             </div>
 
-              <a class="rounded-btn mt-4" (click)="verify()"
-                [disabled]="programForm.invalid" 
+              <button class="rounded-btn mt-4" (click)="verify()"
+                [disabled]="programForm.invalid"
                 [ngClass]="{'disable-opacity': programForm.invalid}">
                 Verify
-              </a>
+              </button>
 
               <a class="my-3 d-block text-center" routerLink="/auth/signup">Cancel</a>
           </form>
