@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ConfigService {
 
-  API_BASE_URL: any = "http://studentv.duckdns.org:8888";
+  API_BASE_URL: any = "https://studentv-api.herokuapp.com";
 
   constructor() { }
 

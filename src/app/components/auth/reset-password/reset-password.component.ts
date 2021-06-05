@@ -1,65 +1,66 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ConfigService } from '../../../core/http/config/config.service';
 import { PresentationalService } from '../../../core/services/presentational/presentational.service';
 
-
 @Component({
-  selector: 'app-forgot',
-  templateUrl: './forgot.component.html',
-  styleUrls: ['./forgot.component.scss']
+  selector: 'app-reset-password',
+  templateUrl: './reset-password.component.html',
+  styleUrls: ['./reset-password.component.scss']
 })
-export class ForgotComponent implements OnInit {
+export class ResetPasswordComponent implements OnInit {
 
   programForm: any = FormGroup;
-  endpoint: any = this.config.API_BASE_URL + '/forgotpassword';
+  endpoint: any = this.config.API_BASE_URL + '/resetpassword';
+
+  data: any = {};
 
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
-    private location: Location,
     private router: Router,
     private config: ConfigService,
     private presentationalS: PresentationalService,
-  ) { }
+  ) {
+    this.data = this.router.getCurrentNavigation()?.extras?.state?.data;
+  }
 
   ngOnInit(): void {
     this.presentationalS.setPresentation('header', false);
     this.presentationalS.setPresentation('bottomBar', false);
 
     this.formInit();
+
+    this.programForm.patchValue({
+      email: this.data.email
+    })
   }
 
   formInit() {
     this.programForm = this.fb.group({
       email: ['', Validators.required],
+      password: ['', Validators.required],
+      confirmPassword: ['', Validators.required],
     });
   }
 
-  forgot() {
+  resetPassword() {
     let data = {
       'userName': this.programForm.value.email,
+      'password': this.programForm.value.password,
     };
 
     this.http.post(this.endpoint, data).subscribe((res: any) => {
       if (res) {
-        this.router.navigate(['/auth/reset-password'], { state: { data: {code: res, email: this.programForm.value.email} } });
+        console.log(res);
       }
     },
     (error) => {
-      if (error.status == 200) {
-        console.log(error);
-
-        this.router.navigate(['/auth/reset-password'], { state: { data: {code: error.error.text, email: this.programForm.value.email} } });
-      }
+      alert(error.error.text);
+      this.router.navigateByUrl('/auth/login');
     })
-  }
-
-  back() {
-    this.location.back();
   }
 
 }

@@ -8,6 +8,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { VerificationComponent } from './verification/verification.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
       {
         path: 'forgot',
         component: ForgotComponent
+      },
+      {
+        path: 'reset-password',
+        component: ResetPasswordComponent
       },
       {
         path: 'terms-conditions',

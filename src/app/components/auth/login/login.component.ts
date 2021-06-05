@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
 
   programForm: any = FormGroup;
   endpoint: any = this.config.API_BASE_URL + '/auth/signin';
+  endpointUser: any = this.config.API_BASE_URL + '/api/users';
 
   constructor(
     private fb: FormBuilder,
@@ -34,22 +35,29 @@ export class LoginComponent implements OnInit {
 
   formInit() {
     this.programForm = this.fb.group({
-      email: ['', Validators.required],
+      username: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
 
   login() {
     let data = {
-      'userName': this.programForm.value.email,
+      'username': this.programForm.value.username,
       'password': this.programForm.value.password
     };
 
     this.http.post(this.endpoint, data).subscribe((res: any) => {
       if (res) {
-        this.checkLogin.setData(res);
-        this.config.setToken(res.token);
-        this.router.navigateByUrl('/course-management');
+        this.http.get(`${this.endpointUser}/${res.id}`).subscribe((r: any) => {
+          if (r) {
+            this.checkLogin.setData(res);
+            this.config.setToken(res.token);
+            this.router.navigateByUrl('/course-management');
+          }
+        },
+        (error) => {
+          alert(error.message);
+        })
       }
     },
     (error) => {
