@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -19,6 +20,7 @@ export class ForgotComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
+    private location: Location,
     private router: Router,
     private config: ConfigService,
     private presentationalS: PresentationalService,
@@ -50,10 +52,14 @@ export class ForgotComponent implements OnInit {
     (error) => {
       if (error.status == 200) {
         console.log(error);
-        
+
         this.router.navigate(['/auth/reset-password'], { state: { data: {code: error.error.text, email: this.programForm.value.email} } });
       }
     })
+  }
+
+  back() {
+    this.location.back();
   }
 
 }
