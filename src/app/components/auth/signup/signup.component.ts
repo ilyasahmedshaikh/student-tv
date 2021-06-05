@@ -14,7 +14,7 @@ import { PresentationalService } from '../../../core/services/presentational/pre
 export class SignupComponent implements OnInit {
 
   programForm: any = FormGroup;
-  endpoint: any = this.config.API_BASE_URL + '/register';
+  endpoint: any = this.config.API_BASE_URL + '/api/users/register';
 
   constructor(
     private fb: FormBuilder,
@@ -34,16 +34,30 @@ export class SignupComponent implements OnInit {
 
   formInit() {
     this.programForm = this.fb.group({
-      firstname: ['', Validators.required],
-      lastname: ['', Validators.required],
-      userName: ['', Validators.required],
+      id: [0, Validators.required],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', Validators.required],
+      username: [''],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required],
+      role: ['user'],
+      status: [true],
     });
   }
 
   signup() {
-    this.http.post(this.endpoint, this.programForm.value).subscribe(res => {
+    let email = this.programForm.value.email.split("@");
+    let username = email[0];
+
+    let data = {
+      ...this.programForm.value,
+      username: username
+    }
+
+    this.http.post(this.endpoint, data).subscribe(res => {
+      console.log(res);
+      
       if(res) {
         this.router.navigate(['/auth/verification'], { state:{ code: res, email: this.programForm.value.userName } })
       } else {
@@ -51,12 +65,7 @@ export class SignupComponent implements OnInit {
       }
     },
     (error) => {
-      // console.log(error);
-      if (error.status == 200) {
-        this.router.navigate(['/auth/verification'], { state:{ code: error.error.text, email: this.programForm.value.userName } })
-      } else {
-        alert(error.response.data);
-      }
+      alert(error.response.data);
     })
   }
 

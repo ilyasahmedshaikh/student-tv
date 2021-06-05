@@ -34,14 +34,14 @@ export class LoginComponent implements OnInit {
 
   formInit() {
     this.programForm = this.fb.group({
-      email: ['', Validators.required],
+      username: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
 
   login() {
     let data = {
-      'userName': this.programForm.value.email,
+      'username': this.programForm.value.username,
       'password': this.programForm.value.password
     };
 
