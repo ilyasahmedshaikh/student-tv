@@ -54,4 +54,9 @@ export class HeaderComponent implements OnInit {
     this.backNavigateService.backLocation();
   }
 
+  logout() {
+    localStorage.clear();
+    this.router.navigateByUrl('/auth/login');
+  }
+
 }

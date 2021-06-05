@@ -43,7 +43,7 @@ export class SignupComponent implements OnInit {
       username: [''],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required],
-      role: ['user'],
+      role: ['user', Validators.required],
       status: [true],
     });
   }
