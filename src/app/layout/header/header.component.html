@@ -46,12 +46,12 @@
           Chat
         </a>
       </li>
-      <li>
+      <li *ngIf="!userData">
         <a (click)="toggleMenu()" routerLink="/auth/login">
           Login
         </a>
       </li>
-      <li>
+      <li *ngIf="userData">
         <a (click)="toggleMenu(); logout()">
           Logout
         </a>
