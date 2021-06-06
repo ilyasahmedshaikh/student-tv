@@ -12,7 +12,7 @@ import { ConfigService } from '../../../core/http/config/config.service';
 export class CreateCourseComponent implements OnInit {
 
   programForm: any = FormGroup;
-  endpoint: any = this.config.API_BASE_URL + '/api/courses';
+  endpoint: any = this.config.API_BASE_URL + '/api/courses/create';
 
   constructor(
     private fb: FormBuilder,

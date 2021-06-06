@@ -12,7 +12,7 @@ import { ConfigService } from '../../../core/http/config/config.service';
 export class CoursesListingComponent implements OnInit {
 
   data: any = [];
-  endpoint: any = this.config.API_BASE_URL + '/api/courses/';
+  endpoint: any = this.config.API_BASE_URL + '/api/courses/all';
 
   constructor(
     private http: HttpClient,

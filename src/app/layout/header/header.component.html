@@ -25,7 +25,7 @@
 </div>
 
 <div class="sidebar side" [ngClass]="{'show': sidebar}">
-    <ul>
+    <ul class="parent-nav">
       <li>
         <a (click)="toggleMenu()" routerLink="/profile">
           Profile
@@ -35,6 +35,18 @@
         <a (click)="toggleMenu()" routerLink="/course-management">
           Course Management
         </a>
+        <ul class="child-nav">
+          <li>
+            <a (click)="toggleMenu()" routerLink="/course-management/create-course">
+              Create Course
+            </a>
+          </li>
+          <li>
+            <a (click)="toggleMenu()" routerLink="/course-management/add-new-question">
+              Add Question
+            </a>
+          </li>
+        </ul>
       </li>
       <li>
         <a (click)="toggleMenu()" routerLink="/news">
