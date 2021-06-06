@@ -46,6 +46,7 @@ export class CreateCourseComponent implements OnInit {
       "id": 0,
       'active': this.programForm.value.active,
       'approval': this.programForm.value.approval,
+      'code': this.programForm.value.code,
       'creationDate': new Date(this.programForm.value.date),
       'creator': this.programForm.value.creator,
       'description': this.programForm.value.description,
