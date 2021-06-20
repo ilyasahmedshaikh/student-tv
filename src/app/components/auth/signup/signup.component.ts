@@ -39,10 +39,14 @@ export class SignupComponent implements OnInit {
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', Validators.required],
+      mobileNo: ['', Validators.required],
+      job: ['', Validators.required],
+      studies: ['', Validators.required],
+      surname: ['', Validators.required],
       userName: [''],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required],
-      role: ['user', Validators.required],
+      role: ['student', Validators.required],
       status: [true],
     });
   }
@@ -56,18 +60,17 @@ export class SignupComponent implements OnInit {
       userName: userName,
       type: this.programForm.value.role
     }
-
-    this.http.post(this.endpoint, data).subscribe(res => {
-      console.log(res);
-
+    
+    this.http.post(this.endpoint, data).subscribe((res: any) => {
       if(res) {
-        this.router.navigate(['/auth/verification'], { state:{ code: res, email: this.programForm.value.email } })
+        alert(res.message);
+        this.router.navigateByUrl('/auth/login');
       } else {
         alert('Signup Failed');
       }
     },
     (error) => {
-      alert(error.response.data);
+      alert(error);
     })
   }
 
