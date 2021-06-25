@@ -12,7 +12,7 @@ import { ConfigService } from '../../../core/http/config/config.service';
 export class CreateCourseComponent implements OnInit {
 
   programForm: any = FormGroup;
-  endpoint: any = this.config.API_BASE_URL + '/api/courses/create';
+  endpoint: any = this.config.API_BASE_URL + '/course/create';
 
   constructor(
     private fb: FormBuilder,
@@ -27,13 +27,13 @@ export class CreateCourseComponent implements OnInit {
 
   formInit() {
     this.programForm = this.fb.group({
-      active: ['', Validators.required],
+      status: ['', Validators.required],
       approval: ['', Validators.required],
       code: ['', Validators.required],
       date: ['', Validators.required],
-      creator: ['', Validators.required],
+      createdBy: ['', Validators.required],
       description: ['', Validators.required],
-      GithubLink: ['', Validators.required],
+      githubLink: ['', Validators.required],
       level: ['', Validators.required],
       link: ['', Validators.required],
       name: ['', Validators.required],
@@ -44,13 +44,13 @@ export class CreateCourseComponent implements OnInit {
   createRegister() {
     let data = {
       "id": 0,
-      'active': this.programForm.value.active,
+      'status': this.programForm.value.status,
       'approval': this.programForm.value.approval,
       'code': this.programForm.value.code,
-      'creationDate': new Date(this.programForm.value.date),
-      'creator': this.programForm.value.creator,
+      'createdDate': new Date(this.programForm.value.date),
+      'createdBy': this.programForm.value.createdBy,
       'description': this.programForm.value.description,
-      'github': this.programForm.value.GithubLink,
+      'githubLink': this.programForm.value.githubLink,
       'level': this.programForm.value.level,
       'link': this.programForm.value.link,
       'name': this.programForm.value.name,
@@ -60,6 +60,7 @@ export class CreateCourseComponent implements OnInit {
     this.http.post(this.endpoint, data).subscribe((res: any) => {
       if (res) {
         console.log(res);
+        this.router.navigateByUrl('/course-management/course-listing');
       }
     },
     (error) => {
