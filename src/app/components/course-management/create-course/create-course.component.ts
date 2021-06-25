@@ -13,6 +13,7 @@ export class CreateCourseComponent implements OnInit {
 
   programForm: any = FormGroup;
   endpoint: any = this.config.API_BASE_URL + '/course/create';
+  userData: any = localStorage.getItem('user');
 
   constructor(
     private fb: FormBuilder,
@@ -27,11 +28,11 @@ export class CreateCourseComponent implements OnInit {
 
   formInit() {
     this.programForm = this.fb.group({
-      status: ['', Validators.required],
+      status: [true, Validators.required],
       approval: ['', Validators.required],
       code: ['', Validators.required],
       date: ['', Validators.required],
-      createdBy: ['', Validators.required],
+      createdBy: [this.userData.userId, Validators.required],
       description: ['', Validators.required],
       githubLink: ['', Validators.required],
       level: ['', Validators.required],
@@ -59,7 +60,7 @@ export class CreateCourseComponent implements OnInit {
 
     this.http.post(this.endpoint, data).subscribe((res: any) => {
       if (res) {
-        console.log(res);
+        alert(res.message);
         this.router.navigateByUrl('/course-management/course-listing');
       }
     },
