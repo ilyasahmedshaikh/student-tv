@@ -13,7 +13,8 @@ import { PresentationalService } from '../../../core/services/presentational/pre
 export class ResetPasswordComponent implements OnInit {
 
   programForm: any = FormGroup;
-  endpoint: any = this.config.API_BASE_URL + '/resetpassword';
+  endpoint: any = this.config.API_BASE_URL + '/user/resetPassword';
+  passwordMatches: boolean = false;
 
   data: any = {};
 
@@ -30,12 +31,18 @@ export class ResetPasswordComponent implements OnInit {
   ngOnInit(): void {
     this.presentationalS.setPresentation('header', false);
     this.presentationalS.setPresentation('bottomBar', false);
+    this.passwordMatches = false;
 
     this.formInit();
 
+    this.programForm.valueChanges.subscribe((newValues: any) => {
+      if (newValues.password == newValues.confirmPassword) this.passwordMatches = true;
+      else this.passwordMatches = false;
+    })
+
     this.programForm.patchValue({
       email: this.data.email
-    })
+    });
   }
 
   formInit() {
@@ -47,14 +54,10 @@ export class ResetPasswordComponent implements OnInit {
   }
 
   resetPassword() {
-    let data = {
-      'userName': this.programForm.value.email,
-      'password': this.programForm.value.password,
-    };
-
-    this.http.post(this.endpoint, data).subscribe((res: any) => {
+    this.http.post(this.endpoint, this.programForm.value).subscribe((res: any) => {
       if (res) {
-        console.log(res);
+        alert('Password Changed Successfully');
+        this.router.navigateByUrl('/auth/login');
       }
     },
     (error) => {

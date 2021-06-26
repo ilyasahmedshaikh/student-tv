@@ -34,7 +34,11 @@
                   </div>
               </div>
 
-              <a class="rounded-btn" (click)="login()">Login</a>
+              <button class="rounded-btn" (click)="login()"
+                [disabled]="programForm.invalid" 
+                [ngClass]="{'disable-opacity': programForm.invalid}">
+                Login
+              </button>
           </form>
           <div class="new-account text-center">
             <span>Don't have an Account?</span>
