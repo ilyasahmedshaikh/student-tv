@@ -10,6 +10,7 @@ import { ExperienceListingComponent } from './experiences/experience-listing/exp
 import { ExperienceDetailsComponent } from './experiences/experience-details/experience-details.component';
 import { StudiesListingComponent } from './studies/studies-listing/studies-listing.component';
 import { StudiesDetailsComponent } from './studies/studies-details/studies-details.component';
+import { UpdatePasswordComponent } from './update-password/update-password.component';
 
 const routes: Routes = [
   {
@@ -63,6 +64,10 @@ const routes: Routes = [
       {
         path: 'privacy-policy',
         component: PrivacyPolicyComponent
+      },
+      {
+        path: 'update-password',
+        component: UpdatePasswordComponent
       }
     ]
   },
