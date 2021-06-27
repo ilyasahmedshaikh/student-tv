@@ -9,38 +9,37 @@
                 <input class="d-none" type="file" accept="image/*" #file (change)="readURL($event)">
                 <a (click)="file.click()">
                     <img *ngIf="!imageUploaded" src={{preview}}>
-                    <!-- <img *ngIf="imageUploaded" src={{loading}}> -->
                 </a>
             </form>
             </div>
-            <h3 class="heading">John Semth</h3>
+            <h3 class="heading">{{userData.firstName}} {{userData.lastName}}</h3>
           </div>
 
-          <form class="inputs pt-4">
+          <form class="inputs pt-4" [formGroup]="programForm">
             <div class="form-group custom-input">
                 <i class="fas fa-user-alt"></i>
-                <input type="name" class="form-control" placeholder="Name">
+                <input type="text" class="form-control" formControlName="firstName" placeholder="First Name">
+            </div>
+            <div class="form-group custom-input">
+                <i class="fas fa-user-alt"></i>
+                <input type="text" class="form-control" formControlName="lastName" placeholder="Last Name">
             </div>
             <div class="form-group custom-input">
                 <i class="fas fa-envelope"></i>
-                <input type="email" class="form-control" placeholder="Email">
+                <input type="email" class="form-control" formControlName="email" placeholder="Email">
             </div>
             <div class="form-group custom-input">
                 <i class="fas fa-mobile-alt"></i>
-                <input type="number" class="form-control" placeholder="Number">
+                <input type="number" class="form-control" formControlName="mobileNo" placeholder="Mobile Number">
             </div>
-            <div class="form-group custom-input">
-                <i class="fas fa-male"></i>
-                <input type="gender" class="form-control" placeholder="Gender">
-            </div>
-            <div class="form-group custom-input">
+            <!-- <div class="form-group custom-input">
                 <i class="fas fa-lock"></i>
                 <input type="password" class="form-control" placeholder="Password">
             </div>
             <div class="form-group custom-input">
                 <i class="far fa-check-circle"></i>
                 <input type="password" class="form-control"  placeholder="Confirm Password">
-            </div>
+            </div> -->
           </form>
 
           <div class="list-group">
