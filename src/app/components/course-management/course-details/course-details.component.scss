@@ -104,6 +104,7 @@
     }
   }
   .info {
+    padding: 0 0 60px 0;
     .scroll-section {
       overflow: auto;
       white-space: nowrap;
@@ -309,6 +310,10 @@
   .progress-bar {
     border-radius: 30px;
   }
+}
+
+.write-comment {
+  padding: 20px 0 0 0;
 }
 
 @media screen and (max-width: 1920px)

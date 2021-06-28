@@ -255,39 +255,16 @@
       </div>
 
       <div class="comments" *ngIf="tab==4">
-        <div class="comment-inner">
-          <div class="review-star">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-          </div>
-          <h6>by SM Jun 11, 2020</h6>
-          <p>Actually the best online course i hv ever learnt,especially the professor yaakov is quiet outstanding.And a field trip in a online course sounds rare and good!!Thank You Coursera and yakkov for this!!</p>
+        <div class="comment-inner" *ngFor="let comment of comments">
+          <h6>{{comment.userDTO.firstName}} {{comment.userDTO.lastName}}</h6>
+          <p class="pt-0 text-black-50"><small>{{comment.createdDate | date: 'medium'}}</small></p>
+          <p>{{comment.comment}}</p>
         </div>
-        <div class="comment-inner">
-          <div class="review-star">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-          </div>
-          <h6>by YV May 31, 2020</h6>
-          <p>Many thanks to the creators of this course! It was a very solid refresher for me, even though I have spent in web development a few years by now. I thoroughly enjoyed every lesson. Thank you, Yaakov!</p>
-        </div>
-        <div class="comment-inner">
-          <div class="review-star">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-          </div>
-          <h6>by NC Mar 16, 2021</h6>
-          <p>Excellent course, specially if you are a professional but in different technologies/ languages, from the back-end world, etc... You will progress very fast as it goes right to the essential notions!</p>
-        </div>
+
+        <form class="write-comment" [formGroup]="commentForm">
+          <textarea class="form-control" formControlName="comment" rows="4" placeholder="Type your comment here.."></textarea>
+          <button class="rounded-btn mt-4" (click)="writeComment()">Comment</button>
+        </form>
       </div>
 
       <div class="row justify-content-center">
