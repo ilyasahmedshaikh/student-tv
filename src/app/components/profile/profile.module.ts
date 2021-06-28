@@ -12,10 +12,11 @@ import { ExperienceListingComponent } from './experiences/experience-listing/exp
 import { ExperienceDetailsComponent } from './experiences/experience-details/experience-details.component';
 import { StudiesListingComponent } from './studies/studies-listing/studies-listing.component';
 import { StudiesDetailsComponent } from './studies/studies-details/studies-details.component';
+import { UpdatePasswordComponent } from './update-password/update-password.component';
 
 
 @NgModule({
-  declarations: [ProfileComponent, ExperiencesComponent, StudiesComponent, PrivacyPolicyComponent, ViewProfileComponent, ExperienceListingComponent, ExperienceDetailsComponent, StudiesListingComponent, StudiesDetailsComponent],
+  declarations: [ProfileComponent, ExperiencesComponent, StudiesComponent, PrivacyPolicyComponent, ViewProfileComponent, ExperienceListingComponent, ExperienceDetailsComponent, StudiesListingComponent, StudiesDetailsComponent, UpdatePasswordComponent],
   imports: [
     CommonModule,
     ProfileRoutingModule,

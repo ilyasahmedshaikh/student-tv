@@ -14,8 +14,8 @@ import { CheckLoginService } from '../../../core/services/checkLogin/check-login
 export class LoginComponent implements OnInit {
 
   programForm: any = FormGroup;
-  endpoint: any = this.config.API_BASE_URL + '/auth/signin';
-  endpointUser: any = this.config.API_BASE_URL + '/api/users';
+  endpoint: any = this.config.API_BASE_URL + '/auth';
+  endpointUser: any = this.config.API_BASE_URL + '/user/view';
 
   constructor(
     private fb: FormBuilder,
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
 
     this.http.post(this.endpoint, data).subscribe((res: any) => {
       if (res) {
-        this.http.get(`${this.endpointUser}/${res.id}`).subscribe((r: any) => {
+        this.http.get(`${this.endpointUser}/${res.userId}`).subscribe((r: any) => {
           if (r) {
             this.checkLogin.setData(res);
             this.config.setToken(res.token);
