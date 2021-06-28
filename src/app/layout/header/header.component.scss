@@ -46,7 +46,7 @@
         color: $white;
         text-transform: capitalize;
     }
-    ul {
+    .parent-nav {
         list-style: none;
         margin-bottom: 0;
         padding-left: 0;
@@ -143,9 +143,6 @@
 
 .back-btn a {
     color: $white;
-    position: absolute;
-    left: 5%;
-    top: 20px;
 }
 
 .right-btn a {
