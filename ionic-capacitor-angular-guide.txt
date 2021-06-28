@@ -1,0 +1,28 @@
+> make www directory on root
+
+> Install & Initialize Capacitor
+    - npm install --save @capacitor/core @capacitor/cli
+    - npx cap init
+
+> ng build --prod --base-href "./"
+
+> add android
+    - npx cap add android
+
+> run android
+    - npx cap run android
+
+> add IOS
+    - npx cap add ios
+
+> run IOS
+    - npx cap run ios
+
+> Sync any changes in code made, this command will update www directory with updated code.
+    - npx cap sync android
+
+> Open updated android codebase on android Studio
+    - npx cap open android
+
+> Now open android directory of angular Project in Android Studio and generate the Build :-)
+    #DevHard #fullStackVibes

@@ -1,0 +1,6 @@
+{
+	"appId": "com.studentTV.app",
+	"appName": "StudentTV",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
