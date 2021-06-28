@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import{ BackNavigateService } from '../../../core/services/back-navigate/back-navigate.service';
 import { PresentationalService } from '../../../core/services/presentational/presentational.service';
 import { HttpClient } from '@angular/common/http';
@@ -16,6 +17,7 @@ export class CoursesListingComponent implements OnInit {
 
   constructor(
     private http: HttpClient,
+    private router: Router,
     private config: ConfigService,
     private backNavigateService: BackNavigateService,
     private presentationalS: PresentationalService
@@ -36,6 +38,11 @@ export class CoursesListingComponent implements OnInit {
     this.http.get(this.endpoint).subscribe(res => {
       this.data = res;
     })
+  }
+
+  viewCourse(item: any) {
+    this.toggleBack(true);
+    this.router.navigate(['/course-management/course-details'], { state: { data: item } });
   }
 
 }

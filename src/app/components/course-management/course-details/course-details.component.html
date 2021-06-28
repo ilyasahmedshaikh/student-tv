@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 course-heading">
-          <h3>App Development</h3>
+          <h3>{{course.name}}</h3>
         </div>
       </div>
       <div class="row">
@@ -51,7 +51,7 @@
             <div class="col-8 col-md-9 col-lg-10">
               <div class="content-sec">
                   <div class="head">
-                    <h6>App Development</h6>
+                    <h6>{{course.name}}</h6>
                     <a class="pt-2"><strong>Yaakov Chaikin</strong></a>
                   </div>
                   <div class="progress mt-2">
@@ -68,7 +68,7 @@
                     <i class="far fa-heart"></i>
                     <p>Like</p>
                   </a>
-                  <a href="https://github.com/">
+                  <a href="{{course.githubLink}}">
                     <i class="fab fa-github"></i>
                     <p>GitHub</p>
                   </a>
@@ -120,7 +120,7 @@
         <div class="col-12">
           <h6>About this Course</h6>
           <p class="views"><strong>1509 recent views</strong></p>
-          <p class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+          <p class="content">{{course.description}}</p>
           <a class="rounded-btn">Apply as a Teacher</a>
         </div>
       </div>
@@ -343,7 +343,7 @@
                   <h6>Tests</h6>
               </div>
               <div class="col-6">
-                  <a href="#" class="chip-icon-btn">
+                  <a class="chip-icon-btn">
                     <i class="fas fa-plus"></i>
                     Add
                   </a>

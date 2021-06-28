@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { ConfigService } from '../../../core/http/config/config.service';
 
 @Component({
   selector: 'app-course-details',
@@ -7,14 +10,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseDetailsComponent implements OnInit {
 
+  endpoint: any = this.config.API_BASE_URL + '/course/view';
+
   list: any = [];
   teacher: any = [];
   test: any = [];
   tab: any = 1;
 
-  constructor() { }
+  data: any = {};
+  course: any = {};
+
+  constructor(
+    private router: Router,
+    private http: HttpClient,
+    private config: ConfigService,
+  ) {
+    this.data = this.router.getCurrentNavigation()?.extras?.state?.data;
+  }
 
   ngOnInit(): void {
+    if (this.data) {
+      this.getCourse();
+    } else {
+      this.router.navigateByUrl('/course-management/course-listing')
+    }
+    
     this.list = [
       {
         class: 'Class 1'
@@ -67,7 +87,16 @@ export class CourseDetailsComponent implements OnInit {
   }
 
   opentab(num: any) {
-    this.tab=num;
-}
+    this.tab = num;
+  }
+
+  getCourse() {
+    this.http.get(`${this.endpoint}/${this.data.id}`).subscribe(res => {
+      this.course = res;
+
+      console.log(this.course);
+      
+    })
+  }
 
 }
