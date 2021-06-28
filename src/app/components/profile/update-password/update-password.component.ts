@@ -1,59 +1,56 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ConfigService } from '../../../core/http/config/config.service';
-import { PresentationalService } from '../../../core/services/presentational/presentational.service';
+import { CheckLoginService } from '../../../core/services/checkLogin/check-login.service';
 
 @Component({
-  selector: 'app-reset-password',
-  templateUrl: './reset-password.component.html',
-  styleUrls: ['./reset-password.component.scss']
+  selector: 'app-update-password',
+  templateUrl: './update-password.component.html',
+  styleUrls: ['./update-password.component.scss']
 })
-export class ResetPasswordComponent implements OnInit {
+export class UpdatePasswordComponent implements OnInit {
 
   programForm: any = FormGroup;
   endpoint: any = this.config.API_BASE_URL + '/user/resetPassword';
   passwordMatches: boolean = false;
 
-  data: any = {};
+  userData: any = {};
 
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
     private router: Router,
     private config: ConfigService,
-    private presentationalS: PresentationalService,
-  ) {
-    this.data = this.router.getCurrentNavigation()?.extras?.state?.data;
-  }
+    private loginService: CheckLoginService
+  ) { }
 
   ngOnInit(): void {
-    this.presentationalS.setPresentation('header', false);
-    this.presentationalS.setPresentation('bottomBar', false);
+    this.userData = this.loginService.getData();
     this.passwordMatches = false;
 
     this.formInit();
+
+    this.programForm.patchValue({
+      email: this.userData.email,
+    })
 
     this.programForm.valueChanges.subscribe((newValues: any) => {
       if (newValues.password == newValues.confirmPassword) this.passwordMatches = true;
       else this.passwordMatches = false;
     })
-
-    this.programForm.patchValue({
-      email: this.data.email
-    });
   }
 
   formInit() {
     this.programForm = this.fb.group({
-      email: ['', Validators.required],
+      email:  ['', Validators.required],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required],
     });
   }
 
-  resetPassword() {
+  updatePassword() {
     this.http.post(this.endpoint, this.programForm.value).subscribe((res: any) => {
       if (res) {
         alert('Password Changed Successfully');

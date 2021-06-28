@@ -25,30 +25,47 @@
 </div>
 
 <div class="sidebar side" [ngClass]="{'show': sidebar}">
-    <ul>
+    <ul class="parent-nav">
       <li>
         <a (click)="toggleMenu()" routerLink="/profile">
-            Profile
+          Profile
         </a>
       </li>
       <li>
         <a (click)="toggleMenu()" routerLink="/course-management">
-            Course Management
+          Course Management
         </a>
+        <ul class="child-nav">
+          <li>
+            <a (click)="toggleMenu()" routerLink="/course-management/create-course">
+              Create Course
+            </a>
+          </li>
+          <li>
+            <a (click)="toggleMenu()" routerLink="/course-management/add-new-question">
+              Add Question
+            </a>
+          </li>
+        </ul>
       </li>
       <li>
         <a (click)="toggleMenu()" routerLink="/news">
-            News
+          News
         </a>
       </li>
       <li>
         <a (click)="toggleMenu()" routerLink="/message">
-            Chat
+          Chat
         </a>
       </li>
-      <li>
+      <li *ngIf="!userData">
         <a (click)="toggleMenu()" routerLink="/auth/login">
-            Login
+          Login
+        </a>
+      </li>
+      <li *ngIf="userData">
+        <a (click)="toggleMenu(); logout()">
+          Logout
         </a>
       </li>
 

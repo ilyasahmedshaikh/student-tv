@@ -12,7 +12,8 @@ import { ConfigService } from '../../../core/http/config/config.service';
 export class CreateCourseComponent implements OnInit {
 
   programForm: any = FormGroup;
-  endpoint: any = this.config.API_BASE_URL + '/api/courses';
+  endpoint: any = this.config.API_BASE_URL + '/course/create';
+  userData: any = localStorage.getItem('user');
 
   constructor(
     private fb: FormBuilder,
@@ -27,13 +28,13 @@ export class CreateCourseComponent implements OnInit {
 
   formInit() {
     this.programForm = this.fb.group({
-      active: ['', Validators.required],
+      status: [true, Validators.required],
       approval: ['', Validators.required],
       code: ['', Validators.required],
       date: ['', Validators.required],
-      creator: ['', Validators.required],
+      createdBy: [this.userData.userId, Validators.required],
       description: ['', Validators.required],
-      GithubLink: ['', Validators.required],
+      githubLink: ['', Validators.required],
       level: ['', Validators.required],
       link: ['', Validators.required],
       name: ['', Validators.required],
@@ -44,12 +45,13 @@ export class CreateCourseComponent implements OnInit {
   createRegister() {
     let data = {
       "id": 0,
-      'active': this.programForm.value.active,
+      'status': this.programForm.value.status,
       'approval': this.programForm.value.approval,
-      'creationDate': new Date(this.programForm.value.date),
-      'creator': this.programForm.value.creator,
+      'code': this.programForm.value.code,
+      'createdDate': new Date(this.programForm.value.date),
+      'createdBy': this.programForm.value.createdBy,
       'description': this.programForm.value.description,
-      'github': this.programForm.value.GithubLink,
+      'githubLink': this.programForm.value.githubLink,
       'level': this.programForm.value.level,
       'link': this.programForm.value.link,
       'name': this.programForm.value.name,
@@ -58,7 +60,8 @@ export class CreateCourseComponent implements OnInit {
 
     this.http.post(this.endpoint, data).subscribe((res: any) => {
       if (res) {
-        console.log(res);
+        alert(res.message);
+        this.router.navigateByUrl('/course-management/course-listing');
       }
     },
     (error) => {
