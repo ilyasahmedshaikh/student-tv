@@ -17,6 +17,8 @@ import { TabBarComponent } from './layout/tab-bar/tab-bar.component';
 import { SliderComponent } from './layout/slider/slider.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -37,6 +39,12 @@ FullCalendarModule.registerPlugins([
     ReactiveFormsModule,
     FullCalendarModule,
     HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [
     {
